@@ -13,6 +13,9 @@
 		3FD7B2D1201816660054D198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7B2D0201816660054D198 /* Assets.xcassets */; };
 		3FD7B2D4201816660054D198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7B2D2201816660054D198 /* LaunchScreen.storyboard */; };
 		3FD7B2DF201816670054D198 /* iOS_SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2DE201816670054D198 /* iOS_SlotMachineTests.swift */; };
+		3FD7B2EA20181A790054D198 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2E920181A790054D198 /* Colors.swift */; };
+		3FD7B2EC20182E370054D198 /* PickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2EB20182E370054D198 /* PickerViewHandler.swift */; };
+		3FD7B2ED20182E370054D198 /* PickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2EB20182E370054D198 /* PickerViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 		3FD7B2DA201816670054D198 /* iOS-SlotMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-SlotMachineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD7B2DE201816670054D198 /* iOS_SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SlotMachineTests.swift; sourceTree = "<group>"; };
 		3FD7B2E0201816670054D198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD7B2E920181A790054D198 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3FD7B2EB20182E370054D198 /* PickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,8 @@
 				3FD7B2D0201816660054D198 /* Assets.xcassets */,
 				3FD7B2D2201816660054D198 /* LaunchScreen.storyboard */,
 				3FD7B2D5201816660054D198 /* Info.plist */,
+				3FD7B2E920181A790054D198 /* Colors.swift */,
+				3FD7B2EB20182E370054D198 /* PickerViewHandler.swift */,
 			);
 			path = "iOS-SlotMachine";
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD7B2CC201816660054D198 /* ViewController.swift in Sources */,
+				3FD7B2EC20182E370054D198 /* PickerViewHandler.swift in Sources */,
+				3FD7B2EA20181A790054D198 /* Colors.swift in Sources */,
 				3FD7B2CA201816660054D198 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD7B2DF201816670054D198 /* iOS_SlotMachineTests.swift in Sources */,
+				3FD7B2ED20182E370054D198 /* PickerViewHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
