@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G18013" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,29 +27,32 @@
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-3c-lOF">
                                         <rect key="frame" x="0.0" y="0.0" width="133.5" height="216"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="g3v-nf-2fp"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="M5u-OH-36l"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nus-81-DRh">
                                         <rect key="frame" x="133.5" y="0.0" width="133.5" height="216"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="YLV-Tm-gYL"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="dz4-ND-4w5"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stW-Qd-Efc">
                                         <rect key="frame" x="267" y="0.0" width="133" height="216"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rEs-x6-27P"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zYK-rH-iAB"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-RE-0cn">
                                         <rect key="frame" x="400" y="0.0" width="133.5" height="216"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="6pp-Qq-aWC"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="zrN-Hc-cYb"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-Nb-v4E">
                                         <rect key="frame" x="533.5" y="0.0" width="133.5" height="216"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="3FN-dl-4hX"/>
+                                        </connections>
                                     </pickerView>
                                 </subviews>
                             </stackView>

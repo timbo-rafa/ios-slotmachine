@@ -16,6 +16,8 @@ class Colors {
     let colorTop = UIColor.black.cgColor//UIColor(red: 192.0 / 255.0, green: 38.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0).cgColor
     let colorBottom = UIColor.darkGray.cgColor//UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
 
+    let gold = UIColor(red:105, green: 55, blue: 0, alpha: 1.0).cgColor
+    // rgb(255,215,0)
     init() {
         self.pickerBG = CAGradientLayer()
         self.pickerBG.colors = [ UIColor.gray, UIColor.white, UIColor.white, UIColor.gray ]

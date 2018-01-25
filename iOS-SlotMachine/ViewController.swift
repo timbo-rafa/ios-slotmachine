@@ -8,8 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate{
+
     let colors = Colors()
+    
+    let fruitsName = [
+        "Apple",
+        "Banana",
+        "Cherry",
+        "Grape",
+        "Kiwi",
+        "Lemon",
+        "Mango",
+        "Mangosteen",
+        "Orange",
+        "Pear",
+        "Strawberry",
+        "Watermelon"
+    ]
+    
+    let fruits: [UIImage] = [
+        #imageLiteral(resourceName: "Apple"),
+        #imageLiteral(resourceName: "Banana"),
+        #imageLiteral(resourceName: "Cherry"),
+        #imageLiteral(resourceName: "Grape"),
+        #imageLiteral(resourceName: "Kiwi"),
+        #imageLiteral(resourceName: "Lemon"),
+        #imageLiteral(resourceName: "Mango"),
+        #imageLiteral(resourceName: "Mangosteen"),
+        #imageLiteral(resourceName: "Orange"),
+        #imageLiteral(resourceName: "Pear"),
+        #imageLiteral(resourceName: "Strawberry"),
+        #imageLiteral(resourceName: "Watermelon")
+    ]
     
     @IBOutlet weak var picker1: UIPickerView!
     
@@ -34,11 +65,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
-        //setAllPickersColor()
+        setAllPickersColor()
     }
     
     func setAllPickersColor() {
-        picker1.backgroundColor = UIColor.clear
+        //picker1.backgroundColor = UIColor.clear
         setPickerColor(Picker: picker1)
         setPickerColor(Picker: picker2)
         setPickerColor(Picker: picker3)
@@ -47,24 +78,31 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func setPickerColor(Picker picker: UIPickerView) {
-        picker.backgroundColor = UIColor.white
-        let backgroundLayer = colors.pickerBG
-        picker.layer.insertSublayer(backgroundLayer!, at: 0)
-        picker.layer.borderWidth = 10
+        //picker.backgroundColor = UIColor.white
+        //let backgroundLayer = colors.pickerBG
+        //picker.layer.insertSublayer(backgroundLayer!, at: 0)
+        picker.layer.borderWidth = 4
         picker.layer.cornerRadius = 5
-        picker.layer.borderColor = UIColor.lightGray.cgColor
+        picker.layer.borderColor = colors.gold
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 12
+        return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
+    /*
+    @available(iOS 2.0, *)
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+    */
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return fruits.count
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 60
+        return #imageLiteral(resourceName: "Apple").size.height + 10
     }
     
     
@@ -72,9 +110,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let myView = UIView(frame: CGRect(x:0, y:0, width:pickerView.bounds.width - 30, height:60))
+        let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
+        //let myView = UIView(frame: CGRect(x:0, y:0, width:pickerView.bounds.width - 30, height:60))
         
-        let myImageView = UIImageView(frame: CGRect(x:0, y:0, width:50, height:50))
+        let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
+        //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height: 50))
         
         var rowString = String()
         /*
@@ -91,13 +131,16 @@ class ViewController: UIViewController, UIPickerViewDelegate {
          myImageView.image = nil
          }
          */
-        rowString = "Apple"
-        myImageView.image = #imageLiteral(resourceName: "Apple")
+        
+        
+        rowString = fruitsName[row]
+        myImageView.image = fruits[row]
         let myLabel = UILabel(frame: CGRect(x:60, y:0, width:pickerView.bounds.width - 90, height:60 ))
         myLabel.font = UIFont(name: "Times New Roman", size: 18)
         myLabel.text = rowString
+        myLabel.textColor = UIColor.white
         
-        myView.addSubview(myLabel)
+        //myView.addSubview(myLabel)
         myView.addSubview(myImageView)
         
         return myView
