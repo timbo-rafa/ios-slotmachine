@@ -422,6 +422,7 @@
 				3FD7B2E5201816670054D198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FD7B2E6201816670054D198 /* Build configuration list for PBXNativeTarget "iOS-SlotMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +431,7 @@
 				3FD7B2E8201816670054D198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
