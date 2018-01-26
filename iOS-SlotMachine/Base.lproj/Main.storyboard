@@ -59,10 +59,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
                                 <rect key="frame" x="70" y="305" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="SPIN">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5ZP-8P-6JG"/>
                             <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="Gr6-Cb-MoT"/>

@@ -12,6 +12,9 @@ class ViewController: UIViewController, UIPickerViewDelegate{
 
     let colors = Colors()
     
+    let EVEN = 0
+    let ODD = 1
+    
     let fruitsName = [
         "Apple",
         "Banana",
@@ -61,7 +64,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         
         
         view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.gl
+        let backgroundLayer = colors.whiteyBG
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
@@ -102,7 +105,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return #imageLiteral(resourceName: "Apple").size.height + 10
+        return #imageLiteral(resourceName: "Apple").size.height //+ 10
     }
     
     
@@ -118,20 +121,16 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         
         var rowString = String()
         /*
-         switch row {
-         case 0:
-         rowString = “Washington”
-         myImageView.image = UIImage(named:"washington.jpg")
-         case 1:
-         rowString = “Beijing”
-         myImageView.image = UIImage(named:"beijing.jpg")
-         case 2:
-         default:
-         rowString = "Error: too many rows"
-         myImageView.image = nil
-         }
-         */
         
+        switch row % 2 {
+        case EVEN:
+            myView.backgroundColor = UIColor.white
+        case ODD:
+            myView.backgroundColor = UIColor.lightGray
+        default:
+            break
+        }
+        */
         
         rowString = fruitsName[row]
         myImageView.image = fruits[row]
@@ -139,6 +138,8 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         myLabel.font = UIFont(name: "Times New Roman", size: 18)
         myLabel.text = rowString
         myLabel.textColor = UIColor.white
+        
+        
         
         //myView.addSubview(myLabel)
         myView.addSubview(myImageView)
