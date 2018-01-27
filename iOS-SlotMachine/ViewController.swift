@@ -109,7 +109,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return #imageLiteral(resourceName: "Apple").size.height //+ 10
+        return #imageLiteral(resourceName: "Apple").size.height + 10
     }
     
     
