@@ -17,6 +17,7 @@ class Colors {
     var redBG: CAGradientLayer!
     var whiteBG: CAGradientLayer!
     
+    
     let colorTop = UIColor.black.cgColor//UIColor(red: 192.0 / 255.0, green: 38.0 / 255.0, blue: 42.0 / 255.0, alpha: 1.0).cgColor
     let colorBottom = UIColor.darkGray.cgColor//UIColor(red: 35.0 / 255.0, green: 2.0 / 255.0, blue: 2.0 / 255.0, alpha: 1.0).cgColor
 
@@ -24,6 +25,7 @@ class Colors {
     let wood = UIColor(red: 194 / 255.0, green: 102 / 255.0, blue: 34 / 255.0, alpha: 1.0).cgColor
     let lightWood = UIColor(red: 237 / 255.0, green: 102 / 255.0, blue: 0 / 255.0, alpha: 1.0).cgColor
     let gold = UIColor(red: 237 / 255.0, green: 176 / 255.0, blue: 0 / 255.0, alpha: 1.0).cgColor
+    let gray = UIColor.gray.cgColor
     
     let pickersLocation: [NSNumber]? = [ 0.0, 0.1, 0.5, 1.0 ]
     // rgb(255,215,0)

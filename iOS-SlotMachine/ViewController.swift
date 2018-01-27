@@ -66,7 +66,9 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         
         
         view.backgroundColor = UIColor.clear
-        let backgroundLayer = colors.whiteyBG
+        
+        //to change background, assign backgroundLayer one of the BG variables from colors
+        let backgroundLayer = colors.woodBG
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
@@ -83,12 +85,12 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     private func setPickerColor(Picker picker: UIPickerView) {
-        //picker.backgroundColor = UIColor.white
+        picker.backgroundColor = UIColor.white
         //let backgroundLayer = colors.pickerBG
         //picker.layer.insertSublayer(backgroundLayer!, at: 0)
         picker.layer.borderWidth = 4
-        picker.layer.cornerRadius = 5
-        picker.layer.borderColor = colors.gold
+        picker.layer.cornerRadius = 20
+        picker.layer.borderColor = colors.gray
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -121,7 +123,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
         //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height: 50))
         
-        var rowString = String()
+        //var rowString = String()
         /*
         
         switch row % 2 {
@@ -133,17 +135,20 @@ class ViewController: UIViewController, UIPickerViewDelegate{
             break
         }
         */
-        
-        rowString = fruitsName[row]
+
+        // white background for each picker
+        //myView.backgroundColor = UIColor.white
         myImageView.image = fruits[row]
+        
+        /*
+        rowString = fruitsName[row]
         let myLabel = UILabel(frame: CGRect(x:60, y:0, width:pickerView.bounds.width - 90, height:60 ))
         myLabel.font = UIFont(name: "Times New Roman", size: 18)
         myLabel.text = rowString
         myLabel.textColor = UIColor.white
+        myView.addSubview(myLabel)
+        */
         
-        
-        
-        //myView.addSubview(myLabel)
         myView.addSubview(myImageView)
         
         return myView
