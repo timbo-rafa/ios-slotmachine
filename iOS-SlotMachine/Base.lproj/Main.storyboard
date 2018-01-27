@@ -22,9 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen-cloth" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-1c-CXi" userLabel="kitchen-cloth">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-72-Dmx" userLabel="Bet Table">
                                 <rect key="frame" x="0.0" y="247" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-vf-HL3">
                                 <rect key="frame" x="0.0" y="64" width="667" height="145"/>
@@ -64,15 +67,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
                                 <rect key="frame" x="127" y="304" width="74" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="gUl-yK-txG"/>
+                                    <constraint firstAttribute="width" constant="74" id="YAr-CL-IXC"/>
                                 </constraints>
                                 <state key="normal" image="big-buy"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
                                 <rect key="frame" x="20" y="308" width="86" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="7yY-RV-zuV"/>
-                                    <constraint firstAttribute="width" constant="86" id="jTV-wM-4hD"/>
+                                    <constraint firstAttribute="width" constant="86" id="1mr-ND-UqS"/>
+                                    <constraint firstAttribute="height" constant="47" id="G5m-VO-2gl"/>
                                 </constraints>
                                 <state key="normal" image="small-buy"/>
                             </button>
@@ -80,34 +83,53 @@
                                 <rect key="frame" x="547" y="255" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="fIV-gt-kU9"/>
+                                    <constraint firstAttribute="width" constant="100" id="MzJ-1r-DNm"/>
                                 </constraints>
                                 <state key="normal" title="SPIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-IR-0UQ">
+                                <rect key="frame" x="0.0" y="226" width="240" height="21"/>
+                                <color key="backgroundColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="N2e-u3-LgO"/>
+                                    <constraint firstAttribute="width" constant="240" id="vcZ-CB-Knb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="95" id="0kw-iC-1Kp"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="6GJ-Nl-d4x"/>
-                            <constraint firstItem="WmW-4F-C6C" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9Y7-9V-bNI"/>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="bottom" secondItem="WmW-4F-C6C" secondAttribute="bottom" id="Gx7-G0-Ajl"/>
-                            <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="JCy-NB-Kjj"/>
-                            <constraint firstItem="WmW-4F-C6C" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="46" id="RwO-7f-opK"/>
-                            <constraint firstAttribute="bottom" secondItem="FhG-Tv-0Wp" secondAttribute="bottom" constant="20" symbolic="YES" id="Vod-Fz-NvM"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WA6-bO-zGb"/>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="leading" secondItem="FhG-Tv-0Wp" secondAttribute="trailing" constant="21" id="cuX-nS-IHC"/>
-                            <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="38" id="gPL-AW-tht"/>
-                            <constraint firstItem="NgY-72-Dmx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gfs-fy-Nt2"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="ghg-jW-Uo4"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="bottom" secondItem="bA9-Fs-5Vm" secondAttribute="bottom" id="njB-OX-XHA"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="99" id="otE-pe-fpg"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vjc-A7-ZTi"/>
-                            <constraint firstAttribute="trailing" secondItem="NgY-72-Dmx" secondAttribute="trailing" constant="427" id="zhZ-rs-LpR"/>
+                            <constraint firstItem="WmW-4F-C6C" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="46" id="7BV-By-EFd"/>
+                            <constraint firstItem="B6Y-1c-CXi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ZT-XM-1U1"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="ywh-IR-0UQ" secondAttribute="leading" id="AXQ-wi-Dhy"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="leading" secondItem="FhG-Tv-0Wp" secondAttribute="trailing" constant="21" id="BLh-hc-uTZ"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="D7r-cM-jfZ"/>
+                            <constraint firstItem="B6Y-1c-CXi" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="GpM-NH-IEK"/>
+                            <constraint firstItem="B6Y-1c-CXi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HE9-sn-gl1"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="bottom" secondItem="WmW-4F-C6C" secondAttribute="bottom" id="LCV-6W-faj"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="top" secondItem="ywh-IR-0UQ" secondAttribute="bottom" constant="61" id="ODl-3T-ISC"/>
+                            <constraint firstItem="ywh-IR-0UQ" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="Q95-AG-A4I"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="bottom" secondItem="bA9-Fs-5Vm" secondAttribute="bottom" id="V2d-Bd-ZtP"/>
+                            <constraint firstItem="ywh-IR-0UQ" firstAttribute="trailing" secondItem="NgY-72-Dmx" secondAttribute="trailing" id="VOm-7x-DXE"/>
+                            <constraint firstItem="B6Y-1c-CXi" firstAttribute="leading" secondItem="yCW-vf-HL3" secondAttribute="leading" id="YjM-L6-gVe"/>
+                            <constraint firstAttribute="trailing" secondItem="B6Y-1c-CXi" secondAttribute="trailing" id="aww-WB-al1"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="ywh-IR-0UQ" secondAttribute="bottom" constant="57" id="cyP-hL-1ER"/>
+                            <constraint firstItem="B6Y-1c-CXi" firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="iDy-c0-cU5"/>
+                            <constraint firstItem="ywh-IR-0UQ" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="17" id="kEr-JO-zhm"/>
+                            <constraint firstItem="WmW-4F-C6C" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kVi-gX-kwn"/>
+                            <constraint firstItem="NgY-72-Dmx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mom-c3-nF0"/>
+                            <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="ywh-IR-0UQ" secondAttribute="bottom" id="oZr-ay-Bye"/>
+                            <constraint firstAttribute="bottom" secondItem="FhG-Tv-0Wp" secondAttribute="bottom" constant="20" symbolic="YES" id="rke-36-rbC"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u7F-SE-S8w"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="betLabel" destination="ywh-IR-0UQ" id="pPb-qF-8BZ"/>
+                        <outlet property="betTable" destination="NgY-72-Dmx" id="ycl-aO-IeM"/>
                         <outlet property="picker1" destination="QUN-3c-lOF" id="chP-9K-7iL"/>
                         <outlet property="picker2" destination="nus-81-DRh" id="0ht-8x-Ah1"/>
                         <outlet property="picker3" destination="stW-Qd-Efc" id="Jxf-kQ-qfA"/>
@@ -123,6 +145,7 @@
     </scenes>
     <resources>
         <image name="big-buy" width="122" height="122"/>
+        <image name="kitchen-cloth" width="1000" height="707"/>
         <image name="small-buy" width="123" height="97"/>
     </resources>
 </document>

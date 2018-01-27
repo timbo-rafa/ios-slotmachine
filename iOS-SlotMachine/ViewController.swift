@@ -57,33 +57,44 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     @IBOutlet weak var picker5: UIPickerView!
     
     @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var betTable: UIView!
+    
+    @IBOutlet weak var betLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         draw()
     }
     
-    func draw() {
+    private func draw() {
         
         
         spinButton.layer.borderColor = UIColor.white.cgColor
         spinButton.layer.borderWidth = 4
         spinButton.layer.cornerRadius = spinButton.frame.width / 2
         
+        //betTable.layer.borderColor = colors.yellow
+        //setGradientBackground(betTable, colors.redBG)
+        
+        //to change background, change woodBG to another color with BG on it
+        //setGradientBackground(view, colors.whiteyBG)
+
+        setAllPickersColor()
+    }
+    
+    private func setGradientBackground(_ view: UIView!,  _ color: CAGradientLayer!) {
         view.backgroundColor = UIColor.clear
         
-        //to change background, assign backgroundLayer one of the BG variables from colors
-        let backgroundLayer = colors.woodBG
+        let backgroundLayer: CAGradientLayer = color
         
-        backgroundLayer?.frame = view.frame
-        view.layer.insertSublayer(backgroundLayer!, at: 0)
-        
-        setAllPickersColor()
+        backgroundLayer.frame = view.frame
+        view.layer.insertSublayer(backgroundLayer, at: 0)
     }
     
     // PICKERVIEW CONFIGURATION
     
-    func setAllPickersColor() {
+    private func setAllPickersColor() {
         //picker1.backgroundColor = UIColor.clear
         setPickerColor(Picker: picker1)
         setPickerColor(Picker: picker2)
@@ -93,7 +104,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     private func setPickerColor(Picker picker: UIPickerView) {
-        //picker.backgroundColor = UIColor.white
+        picker.backgroundColor = UIColor.white
         //let backgroundLayer = colors.pickerBG
         //picker.layer.insertSublayer(backgroundLayer!, at: 0)
         picker.layer.borderWidth = 4

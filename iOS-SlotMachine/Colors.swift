@@ -24,6 +24,8 @@ class Colors {
     let darkWood = UIColor(red: 152 / 255.0, green: 57 / 255.0, blue: 34 / 255.0, alpha: 1.0).cgColor
     let wood = UIColor(red: 194 / 255.0, green: 102 / 255.0, blue: 34 / 255.0, alpha: 1.0).cgColor
     let lightWood = UIColor(red: 237 / 255.0, green: 102 / 255.0, blue: 0 / 255.0, alpha: 1.0).cgColor
+    
+    let yellow = UIColor.yellow.cgColor
     let gold = UIColor(red: 237 / 255.0, green: 176 / 255.0, blue: 0 / 255.0, alpha: 1.0).cgColor
     let gray = UIColor.gray.cgColor
     
