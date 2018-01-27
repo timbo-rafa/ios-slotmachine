@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G18013" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,13 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-72-Dmx" userLabel="Bet Table">
+                                <rect key="frame" x="0.0" y="247" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-vf-HL3">
                                 <rect key="frame" x="0.0" y="64" width="667" height="145"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-3c-lOF">
                                         <rect key="frame" x="0.0" y="0.0" width="133.5" height="145"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="M5u-OH-36l"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="N6u-lk-b7z"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nus-81-DRh">
@@ -57,25 +61,26 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
                                 <rect key="frame" x="127" y="304" width="74" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="bjJ-MV-p79"/>
+                                    <constraint firstAttribute="width" constant="74" id="gUl-yK-txG"/>
                                 </constraints>
                                 <state key="normal" image="big-buy"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
                                 <rect key="frame" x="20" y="308" width="86" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="8Sd-Yg-olU"/>
+                                    <constraint firstAttribute="height" constant="47" id="7yY-RV-zuV"/>
+                                    <constraint firstAttribute="width" constant="86" id="jTV-wM-4hD"/>
                                 </constraints>
                                 <state key="normal" image="small-buy"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
-                                <rect key="frame" x="567" y="304" width="100" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
+                                <rect key="frame" x="547" y="255" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="yFn-S3-KuV"/>
+                                    <constraint firstAttribute="width" constant="100" id="fIV-gt-kU9"/>
                                 </constraints>
                                 <state key="normal" title="SPIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,18 +89,22 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="1qr-z9-oqp"/>
-                            <constraint firstAttribute="bottom" secondItem="FhG-Tv-0Wp" secondAttribute="bottom" constant="20" symbolic="YES" id="46o-W6-2ew"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="6Nb-8m-o92"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="bottom" secondItem="bA9-Fs-5Vm" secondAttribute="bottom" id="CgL-Xi-dby"/>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="WmW-4F-C6C" secondAttribute="top" id="EI6-PB-1bh"/>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="24" id="Kn6-Y7-qCA"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="28" id="Nfm-ix-dzb"/>
-                            <constraint firstItem="WmW-4F-C6C" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Nqs-Pp-ovM"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WPp-Lp-4ZR"/>
-                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="leading" secondItem="FhG-Tv-0Wp" secondAttribute="trailing" constant="21" id="eJ4-Vd-JZY"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="trailing" secondItem="WmW-4F-C6C" secondAttribute="trailing" id="gFI-sP-b3X"/>
-                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k06-NB-wP5"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="95" id="0kw-iC-1Kp"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="6GJ-Nl-d4x"/>
+                            <constraint firstItem="WmW-4F-C6C" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9Y7-9V-bNI"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="bottom" secondItem="WmW-4F-C6C" secondAttribute="bottom" id="Gx7-G0-Ajl"/>
+                            <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="JCy-NB-Kjj"/>
+                            <constraint firstItem="WmW-4F-C6C" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="46" id="RwO-7f-opK"/>
+                            <constraint firstAttribute="bottom" secondItem="FhG-Tv-0Wp" secondAttribute="bottom" constant="20" symbolic="YES" id="Vod-Fz-NvM"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WA6-bO-zGb"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="leading" secondItem="FhG-Tv-0Wp" secondAttribute="trailing" constant="21" id="cuX-nS-IHC"/>
+                            <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="38" id="gPL-AW-tht"/>
+                            <constraint firstItem="NgY-72-Dmx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gfs-fy-Nt2"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="ghg-jW-Uo4"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="bottom" secondItem="bA9-Fs-5Vm" secondAttribute="bottom" id="njB-OX-XHA"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="99" id="otE-pe-fpg"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vjc-A7-ZTi"/>
+                            <constraint firstAttribute="trailing" secondItem="NgY-72-Dmx" secondAttribute="trailing" constant="427" id="zhZ-rs-LpR"/>
                         </constraints>
                     </view>
                     <connections>

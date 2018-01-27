@@ -31,6 +31,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     ]
     
     let fruits: [UIImage] = [
+        #imageLiteral(resourceName: "Apple"), // blank row
         #imageLiteral(resourceName: "Apple"),
         #imageLiteral(resourceName: "Banana"),
         #imageLiteral(resourceName: "Cherry"),
@@ -59,21 +60,28 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        refresh()
+        draw()
     }
     
-    func refresh() {
+    func draw() {
         
+        
+        spinButton.layer.borderColor = UIColor.white.cgColor
+        spinButton.layer.borderWidth = 4
+        spinButton.layer.cornerRadius = spinButton.frame.width / 2
         
         view.backgroundColor = UIColor.clear
         
         //to change background, assign backgroundLayer one of the BG variables from colors
         let backgroundLayer = colors.woodBG
+        
         backgroundLayer?.frame = view.frame
         view.layer.insertSublayer(backgroundLayer!, at: 0)
         
         setAllPickersColor()
     }
+    
+    // PICKERVIEW CONFIGURATION
     
     func setAllPickersColor() {
         //picker1.backgroundColor = UIColor.clear
@@ -85,7 +93,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     private func setPickerColor(Picker picker: UIPickerView) {
-        picker.backgroundColor = UIColor.white
+        //picker.backgroundColor = UIColor.white
         //let backgroundLayer = colors.pickerBG
         //picker.layer.insertSublayer(backgroundLayer!, at: 0)
         picker.layer.borderWidth = 4
@@ -109,7 +117,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return #imageLiteral(resourceName: "Apple").size.height + 10
+        return #imageLiteral(resourceName: "Apple").size.height + 10 // + 10 is padding
     }
     
     
@@ -119,6 +127,11 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         
         let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
         //let myView = UIView(frame: CGRect(x:0, y:0, width:pickerView.bounds.width - 30, height:60))
+        
+        // blank row
+        if (row == 0) {
+            return myView
+        }
         
         let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
         //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height: 50))
@@ -136,8 +149,9 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         }
         */
 
-        // white background for each picker
+        // white background for each row
         //myView.backgroundColor = UIColor.white
+        
         myImageView.image = fruits[row]
         
         /*
