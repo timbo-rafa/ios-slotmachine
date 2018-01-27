@@ -55,6 +55,8 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     @IBOutlet weak var picker5: UIPickerView!
     
+    @IBOutlet weak var spinButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refresh()

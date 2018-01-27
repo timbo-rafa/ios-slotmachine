@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,52 +23,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-vf-HL3">
-                                <rect key="frame" x="0.0" y="64" width="667" height="216"/>
+                                <rect key="frame" x="0.0" y="64" width="667" height="145"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-3c-lOF">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="145"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="M5u-OH-36l"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nus-81-DRh">
-                                        <rect key="frame" x="133.5" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="133.5" y="0.0" width="133.5" height="145"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="dz4-ND-4w5"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stW-Qd-Efc">
-                                        <rect key="frame" x="267" y="0.0" width="133" height="216"/>
+                                        <rect key="frame" x="267" y="0.0" width="133" height="145"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zYK-rH-iAB"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-RE-0cn">
-                                        <rect key="frame" x="400" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="400" y="0.0" width="133.5" height="145"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zrN-Hc-cYb"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-Nb-v4E">
-                                        <rect key="frame" x="533.5" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="533.5" y="0.0" width="133.5" height="145"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="3FN-dl-4hX"/>
                                         </connections>
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
-                                <rect key="frame" x="70" y="305" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
+                                <rect key="frame" x="127" y="304" width="74" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="bjJ-MV-p79"/>
+                                </constraints>
+                                <state key="normal" image="big-buy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
+                                <rect key="frame" x="20" y="308" width="86" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="8Sd-Yg-olU"/>
+                                </constraints>
+                                <state key="normal" image="small-buy"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
+                                <rect key="frame" x="567" y="304" width="100" height="71"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="yFn-S3-KuV"/>
+                                </constraints>
                                 <state key="normal" title="SPIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5ZP-8P-6JG"/>
-                            <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="Gr6-Cb-MoT"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="Jzh-yz-2tC"/>
+                            <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="1qr-z9-oqp"/>
+                            <constraint firstAttribute="bottom" secondItem="FhG-Tv-0Wp" secondAttribute="bottom" constant="20" symbolic="YES" id="46o-W6-2ew"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="6Nb-8m-o92"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="bottom" secondItem="bA9-Fs-5Vm" secondAttribute="bottom" id="CgL-Xi-dby"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="WmW-4F-C6C" secondAttribute="top" id="EI6-PB-1bh"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="24" id="Kn6-Y7-qCA"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="top" secondItem="yCW-vf-HL3" secondAttribute="bottom" constant="28" id="Nfm-ix-dzb"/>
+                            <constraint firstItem="WmW-4F-C6C" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Nqs-Pp-ovM"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WPp-Lp-4ZR"/>
+                            <constraint firstItem="bA9-Fs-5Vm" firstAttribute="leading" secondItem="FhG-Tv-0Wp" secondAttribute="trailing" constant="21" id="eJ4-Vd-JZY"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="trailing" secondItem="WmW-4F-C6C" secondAttribute="trailing" id="gFI-sP-b3X"/>
+                            <constraint firstItem="FhG-Tv-0Wp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k06-NB-wP5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -76,6 +104,7 @@
                         <outlet property="picker3" destination="stW-Qd-Efc" id="Jxf-kQ-qfA"/>
                         <outlet property="picker4" destination="1mQ-RE-0cn" id="qz0-41-wG4"/>
                         <outlet property="picker5" destination="JHP-Nb-v4E" id="Mxl-WM-qcQ"/>
+                        <outlet property="spinButton" destination="WmW-4F-C6C" id="irc-jR-On9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,4 +112,8 @@
             <point key="canvasLocation" x="117.39130434782609" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="big-buy" width="122" height="122"/>
+        <image name="small-buy" width="123" height="97"/>
+    </resources>
 </document>
