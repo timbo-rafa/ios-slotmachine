@@ -91,7 +91,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     private func buttonLayout(_ button: UIButton!, _ hasBorder: Bool = true) {
-        button.layer.borderColor = colors.watermelonDarkGreen
+        button.layer.borderColor = colors.watermelonDarkGreen.cgColor
         button.layer.borderWidth = 4
         button.layer.cornerRadius = button.frame.width / 2
     }
@@ -117,12 +117,12 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     }
     
     private func setPickerColor(Picker picker: UIPickerView) {
-        picker.backgroundColor = UIColor.white
+        picker.backgroundColor = colors.watermelonLightGreen
         //let backgroundLayer = colors.pickerBG
         //picker.layer.insertSublayer(backgroundLayer!, at: 0)
-        picker.layer.borderWidth = 4
+        picker.layer.borderWidth = 6
         picker.layer.cornerRadius = 20
-        picker.layer.borderColor = colors.gray
+        picker.layer.borderColor = colors.watermelonDarkGreen.cgColor
     }
 
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
