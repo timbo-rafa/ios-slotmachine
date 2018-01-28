@@ -28,6 +28,11 @@ class Colors {
     let yellow = UIColor.yellow.cgColor
     let gold = UIColor(red: 237 / 255.0, green: 176 / 255.0, blue: 0 / 255.0, alpha: 1.0).cgColor
     let gray = UIColor.gray.cgColor
+    let red = UIColor(red:214 / 255.0, green: 29 / 255.0, blue: 44 / 255.0, alpha:1.0).cgColor
+    
+    let watermelonLightGreen = UIColor(red: 99 / 255.0, green: 251 / 255.0, blue: 129 / 255.0, alpha:1.0).cgColor
+    let watermelonDarkGreen = UIColor(red: 51 / 255.0, green: 119 / 255.0, blue: 37 / 255.0, alpha:1.0).cgColor
+    let watermelonRed = UIColor(red:214 / 255.0, green: 29 / 255.0, blue: 44 / 255.0, alpha:1.0)
     
     let pickersLocation: [NSNumber]? = [ 0.0, 0.1, 0.5, 1.0 ]
     // rgb(255,215,0)

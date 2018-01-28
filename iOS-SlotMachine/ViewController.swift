@@ -57,10 +57,15 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     @IBOutlet weak var picker5: UIPickerView!
     
     @IBOutlet weak var spinButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton!
+    @IBOutlet weak var fiftyButton: UIButton!
+    
+    
     @IBOutlet weak var betTable: UIView!
     
-    @IBOutlet weak var betLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
     
+    @IBOutlet weak var moneyValue: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,10 +74,11 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     private func draw() {
         
+        buttonLayout(spinButton)
+        //spinButton.backgroundColor = colors.watermelonRed
         
-        spinButton.layer.borderColor = UIColor.white.cgColor
-        spinButton.layer.borderWidth = 4
-        spinButton.layer.cornerRadius = spinButton.frame.width / 2
+        //buttonLayout(fiveButton, false)
+        //buttonLayout(fiftyButton, false)
         
         //betTable.layer.borderColor = colors.yellow
         //setGradientBackground(betTable, colors.redBG)
@@ -80,19 +86,26 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         //to change background, change woodBG to another color with BG on it
         //setGradientBackground(view, colors.whiteyBG)
 
+        //setGradientBackground(betLabel, colors.whiteyBG)
         setAllPickersColor()
     }
     
+    private func buttonLayout(_ button: UIButton!, _ hasBorder: Bool = true) {
+        button.layer.borderColor = colors.watermelonDarkGreen
+        button.layer.borderWidth = 4
+        button.layer.cornerRadius = button.frame.width / 2
+    }
+    
     private func setGradientBackground(_ view: UIView!,  _ color: CAGradientLayer!) {
-        view.backgroundColor = UIColor.clear
+        //view.backgroundColor = UIColor.clear
         
         let backgroundLayer: CAGradientLayer = color
         
-        backgroundLayer.frame = view.frame
+        backgroundLayer.frame = view.bounds
         view.layer.insertSublayer(backgroundLayer, at: 0)
     }
     
-    // PICKERVIEW CONFIGURATION
+    // PICKERVIEW DRAWING
     
     private func setAllPickersColor() {
         //picker1.backgroundColor = UIColor.clear
