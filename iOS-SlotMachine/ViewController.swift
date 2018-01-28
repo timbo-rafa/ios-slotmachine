@@ -61,11 +61,15 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     @IBOutlet weak var fiftyButton: UIButton!
     
     
+    @IBOutlet weak var moneyTable: UIView!
+    
     @IBOutlet weak var betTable: UIView!
     
     @IBOutlet weak var moneyLabel: UILabel!
     
     @IBOutlet weak var moneyValue: UILabel!
+    
+    @IBOutlet weak var jackpotHeader: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,12 +91,23 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         //setGradientBackground(view, colors.whiteyBG)
 
         //setGradientBackground(betLabel, colors.whiteyBG)
+        
+        moneyTable.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        moneyTable.layer.borderWidth = 2
+        moneyTable.layer.cornerRadius = 20
+        
+        betTable.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        betTable.layer.borderWidth = 2
+        betTable.layer.cornerRadius = 20
+        
+        
+        jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 2
         setAllPickersColor()
     }
     
     private func buttonLayout(_ button: UIButton!, _ hasBorder: Bool = true) {
         button.layer.borderColor = colors.watermelonDarkGreen.cgColor
-        button.layer.borderWidth = 4
+        button.layer.borderWidth = 6
         button.layer.cornerRadius = button.frame.width / 2
     }
     

@@ -61,7 +61,7 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-72-Dmx" userLabel="Bet Table">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-72-Dmx" userLabel="Money Table">
                                 <rect key="frame" x="0.0" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONEY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-IR-0UQ">
@@ -142,11 +142,11 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw2-Ke-EhA" userLabel="Bet Table">
-                                <rect key="frame" x="240" y="246" width="282" height="130"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw2-Ke-EhA" userLabel="Bet Table">
+                                <rect key="frame" x="240" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Us-2yb">
-                                        <rect key="frame" x="0.0" y="0.0" width="282" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -173,7 +173,7 @@
                                         <state key="normal" image="small-bet"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYs-12-cMf">
-                                        <rect key="frame" x="174" y="48.5" width="66" height="0.0"/>
+                                        <rect key="frame" x="132" y="48.5" width="66" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="cw8-Va-J1g"/>
                                         </constraints>
@@ -181,7 +181,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
                                         <rect key="frame" x="140" y="45" width="75" height="75"/>
                                         <state key="normal" image="big-bet"/>
                                     </button>
@@ -227,7 +227,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="T2O-sx-xjt" firstAttribute="top" secondItem="dgv-zx-fdk" secondAttribute="top" constant="-6" id="3cH-wx-UQn"/>
                                     <constraint firstItem="T2O-sx-xjt" firstAttribute="leading" secondItem="PIf-EA-C3Y" secondAttribute="trailing" constant="8" symbolic="YES" id="EvF-8t-1Se"/>
@@ -246,10 +246,12 @@
                             <constraint firstItem="dgv-zx-fdk" firstAttribute="top" secondItem="B6Y-1c-CXi" secondAttribute="top" id="3Z8-jW-2p0"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="bottom" secondItem="sw2-Ke-EhA" secondAttribute="bottom" id="4If-Ru-41u"/>
                             <constraint firstItem="dgv-zx-fdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AFV-0d-KUR"/>
+                            <constraint firstItem="sw2-Ke-EhA" firstAttribute="width" secondItem="NgY-72-Dmx" secondAttribute="width" id="ALq-eF-FwU"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aep-g1-4d8"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="trailing" secondItem="WmW-4F-C6C" secondAttribute="trailing" id="DFh-qd-Vvj"/>
                             <constraint firstItem="dgv-zx-fdk" firstAttribute="bottom" secondItem="yCW-vf-HL3" secondAttribute="top" id="F87-PO-E2k"/>
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="trailing" id="Fbu-Qj-3Sf"/>
+                            <constraint firstItem="sw2-Ke-EhA" firstAttribute="height" secondItem="NgY-72-Dmx" secondAttribute="height" id="LNM-th-DER"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Trw-SM-T8m"/>
                             <constraint firstItem="WmW-4F-C6C" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="aAW-dt-vzO"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="226" id="bsE-cP-Axz"/>
@@ -265,10 +267,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="betTable" destination="NgY-72-Dmx" id="ycl-aO-IeM"/>
+                        <outlet property="betTable" destination="sw2-Ke-EhA" id="iyB-gn-flL"/>
                         <outlet property="fiftyButton" destination="bA9-Fs-5Vm" id="Krz-F7-kem"/>
                         <outlet property="fiveButton" destination="FhG-Tv-0Wp" id="rtf-nw-IeU"/>
+                        <outlet property="jackpotHeader" destination="dgv-zx-fdk" id="IEN-CD-PSt"/>
                         <outlet property="moneyLabel" destination="ywh-IR-0UQ" id="bw4-Mz-Hal"/>
+                        <outlet property="moneyTable" destination="NgY-72-Dmx" id="h7Q-sn-h5B"/>
                         <outlet property="moneyValue" destination="nbW-vc-yHH" id="qqQ-4n-Tx7"/>
                         <outlet property="picker1" destination="QUN-3c-lOF" id="chP-9K-7iL"/>
                         <outlet property="picker2" destination="nus-81-DRh" id="0ht-8x-Ah1"/>
