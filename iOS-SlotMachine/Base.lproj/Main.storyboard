@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,7 +71,7 @@
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-vc-yHH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-vc-yHH">
                                         <rect key="frame" x="0.0" y="19" width="240" height="20.5"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -143,13 +142,6 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JACKPOT:$value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-sx-xjt">
-                                <rect key="frame" x="342" y="0.0" width="325" height="56"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
-                                <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="3" height="2"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw2-Ke-EhA" userLabel="Bet Table">
                                 <rect key="frame" x="240" y="246" width="282" height="130"/>
                                 <subviews>
@@ -160,7 +152,7 @@
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwn-f2-geP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$bet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwn-f2-geP">
                                         <rect key="frame" x="0.0" y="19" width="287" height="21"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -218,35 +210,54 @@
                                     <constraint firstItem="2G5-Us-2yb" firstAttribute="leading" secondItem="sw2-Ke-EhA" secondAttribute="leading" id="w3b-U1-4wz"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-EA-C3Y">
-                                <rect key="frame" x="274" y="12" width="60" height="32"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-zx-fdk" userLabel="Jackpot Header">
+                                <rect key="frame" x="152" y="0.0" width="363" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$jackpot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-sx-xjt">
+                                        <rect key="frame" x="189.5" y="-6" width="173.5" height="56"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                        <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="3" height="2"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-EA-C3Y">
+                                        <rect key="frame" x="121.5" y="6" width="60" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="WRU-47-N2T"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="PIf-EA-C3Y" secondAttribute="height" multiplier="15:8" id="saq-Ns-fcU"/>
-                                    <constraint firstAttribute="width" constant="60" id="vpj-Gy-GlF"/>
+                                    <constraint firstItem="T2O-sx-xjt" firstAttribute="top" secondItem="dgv-zx-fdk" secondAttribute="top" constant="-6" id="3cH-wx-UQn"/>
+                                    <constraint firstItem="T2O-sx-xjt" firstAttribute="leading" secondItem="PIf-EA-C3Y" secondAttribute="trailing" constant="8" symbolic="YES" id="EvF-8t-1Se"/>
+                                    <constraint firstItem="PIf-EA-C3Y" firstAttribute="top" secondItem="dgv-zx-fdk" secondAttribute="top" constant="6" id="RB2-P8-9p1"/>
+                                    <constraint firstItem="PIf-EA-C3Y" firstAttribute="centerY" secondItem="T2O-sx-xjt" secondAttribute="centerY" id="Vse-TO-3kc"/>
+                                    <constraint firstItem="PIf-EA-C3Y" firstAttribute="centerY" secondItem="dgv-zx-fdk" secondAttribute="centerY" id="bNh-e6-u1A"/>
+                                    <constraint firstItem="PIf-EA-C3Y" firstAttribute="trailing" secondItem="dgv-zx-fdk" secondAttribute="centerX" id="mvg-Hy-Ceh"/>
+                                    <constraint firstAttribute="trailing" secondItem="T2O-sx-xjt" secondAttribute="trailing" id="zC1-PX-RAu"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="0uv-j1-SLE"/>
+                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="dgv-zx-fdk" secondAttribute="bottom" constant="20" id="1wx-ck-H1o"/>
+                            <constraint firstAttribute="trailing" secondItem="dgv-zx-fdk" secondAttribute="trailing" constant="152" id="2Wv-35-GzK"/>
+                            <constraint firstItem="dgv-zx-fdk" firstAttribute="top" secondItem="B6Y-1c-CXi" secondAttribute="top" id="3Z8-jW-2p0"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="bottom" secondItem="sw2-Ke-EhA" secondAttribute="bottom" id="4If-Ru-41u"/>
-                            <constraint firstItem="PIf-EA-C3Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="4QK-AM-x8c"/>
+                            <constraint firstItem="dgv-zx-fdk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AFV-0d-KUR"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aep-g1-4d8"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="trailing" secondItem="WmW-4F-C6C" secondAttribute="trailing" id="DFh-qd-Vvj"/>
-                            <constraint firstItem="T2O-sx-xjt" firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="EXm-ty-Cku"/>
+                            <constraint firstItem="dgv-zx-fdk" firstAttribute="bottom" secondItem="yCW-vf-HL3" secondAttribute="top" id="F87-PO-E2k"/>
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="trailing" id="Fbu-Qj-3Sf"/>
-                            <constraint firstItem="PIf-EA-C3Y" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIJ-qJ-K7n"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Trw-SM-T8m"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="T2O-sx-xjt" secondAttribute="bottom" constant="8" symbolic="YES" id="Yj6-Hr-XzV"/>
                             <constraint firstItem="WmW-4F-C6C" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="aAW-dt-vzO"/>
-                            <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="PIf-EA-C3Y" secondAttribute="bottom" constant="20" id="brY-Qs-UAj"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="226" id="bsE-cP-Axz"/>
                             <constraint firstAttribute="trailing" secondItem="B6Y-1c-CXi" secondAttribute="trailing" id="ccD-ko-npA"/>
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="240" id="dzY-z2-2si"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g8A-mP-8Hk"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="sw2-Ke-EhA" secondAttribute="top" id="go7-Vw-D24"/>
                             <constraint firstAttribute="trailing" secondItem="yCW-vf-HL3" secondAttribute="trailing" id="iCg-Z3-Xid"/>
-                            <constraint firstItem="T2O-sx-xjt" firstAttribute="top" secondItem="B6Y-1c-CXi" secondAttribute="top" id="n8V-35-FQT"/>
-                            <constraint firstItem="T2O-sx-xjt" firstAttribute="leading" secondItem="PIf-EA-C3Y" secondAttribute="trailing" constant="8" symbolic="YES" id="pNN-HA-tO1"/>
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="top" secondItem="WmW-4F-C6C" secondAttribute="top" id="qvO-i6-FS3"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="leading" secondItem="yCW-vf-HL3" secondAttribute="leading" id="vyW-ms-nm5"/>
                             <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="xAs-dR-isa"/>
@@ -269,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123.68815592203899" y="162.40000000000001"/>
+            <point key="canvasLocation" x="169.56521739130437" y="160.80000000000001"/>
         </scene>
     </scenes>
     <resources>
