@@ -157,6 +157,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func drawReels() {
+        // return all pickers to last line so all reels rolls up on animation
+        picker1.selectRow(game.emptyRow, inComponent: 0, animated: false)
+        picker2.selectRow(game.emptyRow, inComponent: 0, animated: false)
+        picker3.selectRow(game.emptyRow, inComponent: 0, animated: false)
+        picker4.selectRow(game.emptyRow, inComponent: 0, animated: false)
+        picker5.selectRow(game.emptyRow, inComponent: 0, animated: false)
+        
+        // display selected rows
         picker1.selectRow(game.selected1, inComponent: 0, animated: true)
         picker2.selectRow(game.selected2, inComponent: 0, animated: true)
         picker3.selectRow(game.selected3, inComponent: 0, animated: true)
@@ -176,7 +184,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     private func disableBetIfNeeded() {
         betFive.isEnabled = !game.disableFive
         betFifty.isEnabled = !game.disableFifty
-        spinButton.isEnabled = !game.nullBet
+        //spinButton.isEnabled = !game.nullBet
         
     }
 
