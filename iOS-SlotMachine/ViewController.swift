@@ -57,16 +57,17 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var jackpotHeader: UIView!
     
     required init?(coder aDecoder: NSCoder) {
-        self.game = SlotMachineEngine(NumberOfPickers: fruits.count)
+        self.game = SlotMachineEngine(FruitsCount: fruits.count)
         super.init(coder: aDecoder)
+        
         //fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        game = SlotMachineEngine(NumberOfPickers:fruits.count)
         draw()
+        
+        self.drawReels()
     }
     
     private func draw() {
@@ -109,7 +110,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return fruits.count
+        return fruits.count + 1
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -124,6 +125,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         //let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
         let myView = UIView(frame: CGRect(x:0, y:0, width: width, height:height))
         
+        //blank row
+        if (row == fruits.count) {
+            return myView
+        }
+        
         //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
         let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: width, height: height))
         myImageView.image = fruits[row]
@@ -137,26 +143,21 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         // do something with selected row
     }
     
-    private func rand() -> Int {
-        return Int(arc4random_uniform(UInt32(fruits.count)))
+    private func drawReels() {
+        picker1.selectRow(game.selected1, inComponent: 0, animated: true)
+        picker2.selectRow(game.selected2, inComponent: 0, animated: true)
+        picker3.selectRow(game.selected3, inComponent: 0, animated: true)
+        picker4.selectRow(game.selected4, inComponent: 0, animated: true)
+        picker5.selectRow(game.selected5, inComponent: 0, animated: true)
     }
+
     
     @IBAction func spin(_ sender: UIButton) {
 
         sender.pulsate()
         
-        let game = SlotMachineEngine(NumberOfPickers: fruits.count)
         game.spin()
-        spinReel(picker1)
-        spinReel(picker2)
-        spinReel(picker3)
-        spinReel(picker4)
-        spinReel(picker5)
-    }
-    
-    private func spinReel( _ reel: UIPickerView) {
-        let i = rand()
-        reel.selectRow(i, inComponent: 0, animated: true)
+        drawReels()
     }
 }
 
