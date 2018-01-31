@@ -90,6 +90,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
                                         <rect key="frame" x="28" y="46" width="75" height="75"/>
                                         <state key="normal" image="small-buy"/>
+                                        <connections>
+                                            <action selector="insertFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smq-II-Wnp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-37-4Bn">
                                         <rect key="frame" x="132" y="49" width="66" height="0.0"/>
@@ -103,6 +106,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
                                         <rect key="frame" x="140" y="46" width="75" height="75"/>
                                         <state key="normal" image="big-buy"/>
+                                        <connections>
+                                            <action selector="insertFifty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9t-YB-tpy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,6 +180,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-AF-cnP">
                                         <rect key="frame" x="28" y="45" width="75" height="75"/>
                                         <state key="normal" image="small-bet"/>
+                                        <connections>
+                                            <action selector="betFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ym5-tz-pBH"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYs-12-cMf">
                                         <rect key="frame" x="132" y="49" width="66" height="0.0"/>
@@ -187,6 +196,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
                                         <rect key="frame" x="140" y="46" width="75" height="74"/>
                                         <state key="normal" image="big-bet"/>
+                                        <connections>
+                                            <action selector="betFifty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMT-qh-sRC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>

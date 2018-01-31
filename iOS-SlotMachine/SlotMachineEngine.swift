@@ -35,6 +35,21 @@ class SlotMachineEngine {
         spinReels()
     }
     
+    public func insert(Value value: Int) {
+        self.money += value
+    }
+    
+    public func bet(Value value: Int) -> Bool {
+        // Only bet what you have
+        if (value > self.money) {
+            return false
+        }
+        
+        self.bet += value
+        self.money -= value
+        return true
+    }
+    
     private func spinReels() {
         self.selected1 = rand()
         self.selected2 = rand()

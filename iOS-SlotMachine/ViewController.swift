@@ -161,6 +161,31 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
     }
 
+    @IBAction func insertFive(_ sender: UIButton) {
+        game.insert(Value:5)
+        self.drawValues()
+    }
+    
+    @IBAction func insertFifty(_ sender: UIButton) {
+        game.insert(Value:50)
+        self.drawValues()
+    }
+    
+    @IBAction func betFive(_ sender: UIButton) {
+        if (!game.bet(Value:5)) {
+            print("Not enough Money to bet 5")
+        }
+        self.drawValues()
+    }
+    
+    @IBAction func betFifty(_ sender: UIButton) {
+        if (!game.bet(Value:50)) {
+            print("Not enough Money to bet 50")
+        }
+        self.drawValues()
+    }
+    
+    
     
     @IBAction func spin(_ sender: UIButton) {
 
