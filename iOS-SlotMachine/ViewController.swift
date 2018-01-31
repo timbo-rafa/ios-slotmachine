@@ -207,11 +207,30 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         return myView
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         // do something with selected row
     }
+    
+    private func rand() -> Int {
+        return Int(arc4random_uniform(UInt32(fruits.count)))
+    }
+    
+    @IBAction func spin(_ sender: Any) {
 
+        spinReel(picker1)
+        spinReel(picker2)
+        spinReel(picker3)
+        spinReel(picker4)
+        spinReel(picker5)
+    }
+    
+    private func spinReel( _ reel: UIPickerView) {
+        let i = rand()
+        reel.selectRow(i, inComponent: 0, animated: true)
+    }
+    
     
 }
 
