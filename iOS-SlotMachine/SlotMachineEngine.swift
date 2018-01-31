@@ -9,6 +9,10 @@ class SlotMachineEngine {
     var selected4: Int
     var selected5: Int
     var emptyRow: Int
+    
+    var jackpot: Int
+    var money: Int
+    var bet: Int
     //var isBug: [Bool] = [false]
     
     init(FruitsCount fruitsCount: Int) {
@@ -20,6 +24,10 @@ class SlotMachineEngine {
         self.selected3 = self.emptyRow
         self.selected4 = self.emptyRow
         self.selected5 = self.emptyRow
+        
+        self.jackpot = 0
+        self.money = 0
+        self.bet = 0
     }
     
     public func spin() {

@@ -52,7 +52,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var moneyLabel: UILabel!
     
-    @IBOutlet weak var moneyValue: UILabel!
+    @IBOutlet weak var money: UILabel!
+    @IBOutlet weak var bet: UILabel!
+    @IBOutlet weak var jackpot: UILabel!
     
     @IBOutlet weak var jackpotHeader: UIView!
     
@@ -68,6 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         draw()
         
         self.drawReels()
+        self.drawValues()
     }
     
     private func draw() {
@@ -149,6 +152,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         picker3.selectRow(game.selected3, inComponent: 0, animated: true)
         picker4.selectRow(game.selected4, inComponent: 0, animated: true)
         picker5.selectRow(game.selected5, inComponent: 0, animated: true)
+    }
+    
+    private func drawValues() {
+        self.money.text   = String(game.money)
+        self.bet.text     = String(game.bet)
+        self.jackpot.text = String(game.jackpot)
+        
     }
 
     

@@ -270,13 +270,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bet" destination="Pwn-f2-geP" id="2d5-DI-POU"/>
                         <outlet property="betTable" destination="sw2-Ke-EhA" id="iyB-gn-flL"/>
                         <outlet property="fiftyButton" destination="bA9-Fs-5Vm" id="Krz-F7-kem"/>
                         <outlet property="fiveButton" destination="FhG-Tv-0Wp" id="rtf-nw-IeU"/>
+                        <outlet property="jackpot" destination="T2O-sx-xjt" id="yzB-MJ-to0"/>
                         <outlet property="jackpotHeader" destination="dgv-zx-fdk" id="IEN-CD-PSt"/>
+                        <outlet property="money" destination="nbW-vc-yHH" id="C64-Rz-0aB"/>
                         <outlet property="moneyLabel" destination="ywh-IR-0UQ" id="bw4-Mz-Hal"/>
                         <outlet property="moneyTable" destination="NgY-72-Dmx" id="h7Q-sn-h5B"/>
-                        <outlet property="moneyValue" destination="nbW-vc-yHH" id="qqQ-4n-Tx7"/>
                         <outlet property="picker1" destination="QUN-3c-lOF" id="chP-9K-7iL"/>
                         <outlet property="picker2" destination="nus-81-DRh" id="0ht-8x-Ah1"/>
                         <outlet property="picker3" destination="stW-Qd-Efc" id="Jxf-kQ-qfA"/>
