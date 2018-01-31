@@ -155,9 +155,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func drawValues() {
-        self.money.text   = String(game.money)
-        self.bet.text     = String(game.bet)
-        self.jackpot.text = String(game.jackpot)
+        self.money.text   = "$" + String(game.money)
+        self.bet.text     = "$" + String(game.bet)
+        self.jackpot.text = "$" + String(game.jackpot)
         
     }
 
