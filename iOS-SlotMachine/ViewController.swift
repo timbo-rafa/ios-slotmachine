@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate{
+class ViewController: UIViewController, UIPickerViewDelegate {
 
     let colors = Colors()
     
@@ -29,6 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         #imageLiteral(resourceName: "Strawberry"),
         #imageLiteral(resourceName: "Watermelon")
     ]
+    var game: SlotMachineEngine
     
     @IBOutlet weak var picker1: UIPickerView!
     
@@ -55,8 +56,16 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     @IBOutlet weak var jackpotHeader: UIView!
     
+    required init?(coder aDecoder: NSCoder) {
+        self.game = SlotMachineEngine(NumberOfPickers: fruits.count)
+        super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        game = SlotMachineEngine(NumberOfPickers:fruits.count)
         draw()
     }
     
@@ -136,6 +145,8 @@ class ViewController: UIViewController, UIPickerViewDelegate{
 
         sender.pulsate()
         
+        let game = SlotMachineEngine(NumberOfPickers: fruits.count)
+        game.spin()
         spinReel(picker1)
         spinReel(picker2)
         spinReel(picker3)
