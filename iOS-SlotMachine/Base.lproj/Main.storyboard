@@ -30,13 +30,13 @@
                                 <rect key="frame" x="0.0" y="64" width="667" height="216"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-3c-lOF">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="216"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="N6u-lk-b7z"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ETj-Th-FNa"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nus-81-DRh">
-                                        <rect key="frame" x="133.5" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="133" y="0.0" width="134" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="dz4-ND-4w5"/>
                                         </connections>
@@ -48,13 +48,13 @@
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-RE-0cn">
-                                        <rect key="frame" x="400" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="400" y="0.0" width="134" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zrN-Hc-cYb"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-Nb-v4E">
-                                        <rect key="frame" x="533.5" y="0.0" width="133.5" height="216"/>
+                                        <rect key="frame" x="534" y="0.0" width="133" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="3FN-dl-4hX"/>
                                         </connections>
@@ -65,21 +65,21 @@
                                 <rect key="frame" x="0.0" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONEY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-IR-0UQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbW-vc-yHH">
-                                        <rect key="frame" x="0.0" y="19" width="240" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="19" width="240" height="21"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-iQ-8zK">
-                                        <rect key="frame" x="34" y="69.5" width="62" height="0.5"/>
+                                        <rect key="frame" x="34" y="70" width="62" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="fv5-4a-8JR"/>
                                         </constraints>
@@ -88,11 +88,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
-                                        <rect key="frame" x="28" y="45.5" width="75" height="75.5"/>
+                                        <rect key="frame" x="28" y="46" width="75" height="75"/>
                                         <state key="normal" image="small-buy"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-37-4Bn">
-                                        <rect key="frame" x="132" y="48.5" width="66" height="0.0"/>
+                                        <rect key="frame" x="132" y="49" width="66" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="JkR-Ep-FXw"/>
                                         </constraints>
@@ -101,7 +101,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
-                                        <rect key="frame" x="140" y="45.5" width="75" height="75.5"/>
+                                        <rect key="frame" x="140" y="46" width="75" height="75"/>
                                         <state key="normal" image="big-buy"/>
                                     </button>
                                 </subviews>
@@ -149,7 +149,7 @@
                                 <rect key="frame" x="240" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Us-2yb">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="21"/>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,7 +163,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikp-CF-3bB">
-                                        <rect key="frame" x="34" y="69.5" width="62" height="1.5"/>
+                                        <rect key="frame" x="34" y="70" width="62" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="AY0-k1-bla"/>
                                         </constraints>
@@ -172,11 +172,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-AF-cnP">
-                                        <rect key="frame" x="28" y="44.5" width="75" height="75.5"/>
+                                        <rect key="frame" x="28" y="45" width="75" height="75"/>
                                         <state key="normal" image="small-bet"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYs-12-cMf">
-                                        <rect key="frame" x="132" y="48.5" width="66" height="0.0"/>
+                                        <rect key="frame" x="132" y="49" width="66" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="cw8-Va-J1g"/>
                                         </constraints>
@@ -185,7 +185,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
-                                        <rect key="frame" x="140" y="45" width="75" height="75"/>
+                                        <rect key="frame" x="140" y="46" width="75" height="74"/>
                                         <state key="normal" image="big-bet"/>
                                     </button>
                                 </subviews>
@@ -217,14 +217,14 @@
                                 <rect key="frame" x="152" y="0.0" width="363" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$jackpot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-sx-xjt">
-                                        <rect key="frame" x="189.5" y="-6" width="173.5" height="56"/>
+                                        <rect key="frame" x="190" y="-6" width="173" height="56"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="3" height="2"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-EA-C3Y">
-                                        <rect key="frame" x="121.5" y="6" width="60" height="32"/>
+                                        <rect key="frame" x="122" y="6" width="60" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="WRU-47-N2T"/>
                                         </constraints>

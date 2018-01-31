@@ -31,7 +31,9 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     ]
     
     let fruits: [UIImage] = [
-        #imageLiteral(resourceName: "Apple"), // blank row
+        #imageLiteral(resourceName: "fly-1"),
+        #imageLiteral(resourceName: "fly-2"),
+        #imageLiteral(resourceName: "fly-3"),
         #imageLiteral(resourceName: "Apple"),
         #imageLiteral(resourceName: "Banana"),
         #imageLiteral(resourceName: "Cherry"),
@@ -164,16 +166,14 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
-        //let myView = UIView(frame: CGRect(x:0, y:0, width:pickerView.bounds.width - 30, height:60))
+        let width: Int = Int(pickerView.bounds.width) - 30
+        let height = 120
+        //let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
+        let myView = UIView(frame: CGRect(x:0, y:0, width: width, height:height))
         
-        // blank row
-        if (row == 0) {
-            return myView
-        }
         
-        let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
-        //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: 50, height: 50))
+        //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
+        let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: width, height: height))
         
         //var rowString = String()
         /*
@@ -217,8 +217,10 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         return Int(arc4random_uniform(UInt32(fruits.count)))
     }
     
-    @IBAction func spin(_ sender: Any) {
+    @IBAction func spin(_ sender: UIButton) {
 
+        sender.pulsate()
+        
         spinReel(picker1)
         spinReel(picker2)
         spinReel(picker3)
