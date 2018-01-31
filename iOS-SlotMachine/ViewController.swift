@@ -177,6 +177,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         betFive.isEnabled = !game.disableFive
         betFifty.isEnabled = !game.disableFifty
         spinButton.isEnabled = !game.nullBet
+        
     }
 
     @IBAction func insertFive(_ sender: UIButton) {
