@@ -12,24 +12,6 @@ class ViewController: UIViewController, UIPickerViewDelegate{
 
     let colors = Colors()
     
-    let EVEN = 0
-    let ODD = 1
-    
-    let fruitsName = [
-        "Apple",
-        "Banana",
-        "Cherry",
-        "Grape",
-        "Kiwi",
-        "Lemon",
-        "Mango",
-        "Mangosteen",
-        "Orange",
-        "Pear",
-        "Strawberry",
-        "Watermelon"
-    ]
-    
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
         #imageLiteral(resourceName: "fly-2"),
@@ -80,19 +62,9 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     private func draw() {
         
-        buttonLayout(spinButton)
-        //spinButton.backgroundColor = colors.watermelonRed
-        
-        //buttonLayout(fiveButton, false)
-        //buttonLayout(fiftyButton, false)
-        
-        //betTable.layer.borderColor = colors.yellow
-        //setGradientBackground(betTable, colors.redBG)
-        
-        //to change background, change woodBG to another color with BG on it
-        //setGradientBackground(view, colors.whiteyBG)
-
-        //setGradientBackground(betLabel, colors.whiteyBG)
+        spinButton.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        spinButton.layer.borderWidth = 6
+        spinButton.layer.cornerRadius = spinButton.frame.width / 2
         
         moneyTable.layer.borderColor = colors.watermelonDarkGreen.cgColor
         moneyTable.layer.borderWidth = 2
@@ -102,30 +74,13 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         betTable.layer.borderWidth = 2
         betTable.layer.cornerRadius = 20
         
-        
         jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 2
         setAllPickersColor()
-    }
-    
-    private func buttonLayout(_ button: UIButton!, _ hasBorder: Bool = true) {
-        button.layer.borderColor = colors.watermelonDarkGreen.cgColor
-        button.layer.borderWidth = 6
-        button.layer.cornerRadius = button.frame.width / 2
-    }
-    
-    private func setGradientBackground(_ view: UIView!,  _ color: CAGradientLayer!) {
-        //view.backgroundColor = UIColor.clear
-        
-        let backgroundLayer: CAGradientLayer = color
-        
-        backgroundLayer.frame = view.bounds
-        view.layer.insertSublayer(backgroundLayer, at: 0)
     }
     
     // PICKERVIEW DRAWING
     
     private func setAllPickersColor() {
-        //picker1.backgroundColor = UIColor.clear
         setPickerColor(Picker: picker1)
         setPickerColor(Picker: picker2)
         setPickerColor(Picker: picker3)
@@ -135,8 +90,6 @@ class ViewController: UIViewController, UIPickerViewDelegate{
     
     private func setPickerColor(Picker picker: UIPickerView) {
         picker.backgroundColor = colors.watermelonLightGreen
-        //let backgroundLayer = colors.pickerBG
-        //picker.layer.insertSublayer(backgroundLayer!, at: 0)
         picker.layer.borderWidth = 6
         picker.layer.cornerRadius = 20
         picker.layer.borderColor = colors.watermelonDarkGreen.cgColor
@@ -146,13 +99,6 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         return 1
     }
     
-    /*
-    @available(iOS 2.0, *)
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1;
-    }
-    */
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return fruits.count
     }
@@ -161,52 +107,21 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         return #imageLiteral(resourceName: "Apple").size.height + 10 // + 10 is padding
     }
     
-    
-    // MARK: UIPickerViewDelegate
-    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let width: Int = Int(pickerView.bounds.width) - 30
         let height = 120
+        
         //let myView = UIView(frame: CGRect(x:0, y:0, width: pickerView.bounds.width - 30, height:fruits[row].size.height))
         let myView = UIView(frame: CGRect(x:0, y:0, width: width, height:height))
         
-        
         //let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: fruits[row].size.width, height: fruits[row].size.height))
         let myImageView = UIImageView(frame: CGRect(x:0, y:0, width: width, height: height))
-        
-        //var rowString = String()
-        /*
-        
-        switch row % 2 {
-        case EVEN:
-            myView.backgroundColor = UIColor.white
-        case ODD:
-            myView.backgroundColor = UIColor.lightGray
-        default:
-            break
-        }
-        */
-
-        // white background for each row
-        //myView.backgroundColor = UIColor.white
-        
         myImageView.image = fruits[row]
-        
-        /*
-        rowString = fruitsName[row]
-        let myLabel = UILabel(frame: CGRect(x:60, y:0, width:pickerView.bounds.width - 90, height:60 ))
-        myLabel.font = UIFont(name: "Times New Roman", size: 18)
-        myLabel.text = rowString
-        myLabel.textColor = UIColor.white
-        myView.addSubview(myLabel)
-        */
-        
         myView.addSubview(myImageView)
         
         return myView
     }
-    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
@@ -232,7 +147,5 @@ class ViewController: UIViewController, UIPickerViewDelegate{
         let i = rand()
         reel.selectRow(i, inComponent: 0, animated: true)
     }
-    
-    
 }
 
