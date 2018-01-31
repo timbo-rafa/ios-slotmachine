@@ -90,6 +90,15 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 2
         setAllPickersColor()
+        disablePickerUserInteraction()
+    }
+    
+    private func disablePickerUserInteraction() {
+        picker1.isUserInteractionEnabled = false
+        picker2.isUserInteractionEnabled = false
+        picker3.isUserInteractionEnabled = false
+        picker4.isUserInteractionEnabled = false
+        picker5.isUserInteractionEnabled = false
     }
     
     // PICKERVIEW DRAWING
