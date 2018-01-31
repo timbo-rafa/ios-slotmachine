@@ -283,6 +283,8 @@
                     </view>
                     <connections>
                         <outlet property="bet" destination="Pwn-f2-geP" id="2d5-DI-POU"/>
+                        <outlet property="betFifty" destination="kuT-Yn-Wdr" id="DG6-dP-A4h"/>
+                        <outlet property="betFive" destination="8rp-AF-cnP" id="dtS-ER-jC4"/>
                         <outlet property="betTable" destination="sw2-Ke-EhA" id="iyB-gn-flL"/>
                         <outlet property="fiftyButton" destination="bA9-Fs-5Vm" id="Krz-F7-kem"/>
                         <outlet property="fiveButton" destination="FhG-Tv-0Wp" id="rtf-nw-IeU"/>

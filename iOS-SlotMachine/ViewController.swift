@@ -44,7 +44,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var spinButton: UIButton!
     @IBOutlet weak var fiveButton: UIButton!
     @IBOutlet weak var fiftyButton: UIButton!
-    
+    @IBOutlet weak var betFive: UIButton!
+    @IBOutlet weak var betFifty: UIButton!
     
     @IBOutlet weak var moneyTable: UIView!
     
@@ -159,6 +160,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.bet.text     = "$" + String(game.bet)
         self.jackpot.text = "$" + String(game.jackpot)
         
+        self.disableBetIfNeeded()
+        
+    }
+    
+    private func disableBetIfNeeded() {
+        betFive.isEnabled = !game.disableFive
+        betFifty.isEnabled = !game.disableFifty
     }
 
     @IBAction func insertFive(_ sender: UIButton) {

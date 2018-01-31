@@ -13,7 +13,10 @@ class SlotMachineEngine {
     var jackpot: Int
     var money: Int
     var bet: Int
-    //var isBug: [Bool] = [false]
+    
+    var disableFive: Bool
+    var disableFifty: Bool
+    var nullBet: Bool
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -28,6 +31,10 @@ class SlotMachineEngine {
         self.jackpot = 0
         self.money = 0
         self.bet = 0
+        
+        self.disableFive = true
+        self.disableFifty = true
+        self.nullBet = true
     }
     
     public func spin() {
@@ -37,6 +44,14 @@ class SlotMachineEngine {
     
     public func insert(Value value: Int) {
         self.money += value
+        
+        if (self.money >= 5) {
+            self.disableFive = false
+        }
+        
+        if (self.money >= 50) {
+            self.disableFifty = false
+        }
     }
     
     public func bet(Value value: Int) -> Bool {
@@ -47,6 +62,15 @@ class SlotMachineEngine {
         
         self.bet += value
         self.money -= value
+        
+        if (self.money < 5) {
+            self.disableFive = true
+        }
+        if (self.money < 50) {
+            self.disableFifty = true
+        }
+        
+        self.nullBet = false
         return true
     }
     
