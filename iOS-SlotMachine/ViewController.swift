@@ -66,14 +66,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        draw()
+        self.paint()
         
-        self.drawReels()
-        self.drawValues()
+        self.draw()
     }
     
-    private func draw() {
-        
+    private func paint() {
+        // stylize the game
         spinButton.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         spinButton.layer.borderWidth = 6
         spinButton.layer.cornerRadius = spinButton.frame.width / 2
@@ -161,6 +160,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         picker3.selectRow(game.selected3, inComponent: 0, animated: true)
         picker4.selectRow(game.selected4, inComponent: 0, animated: true)
         picker5.selectRow(game.selected5, inComponent: 0, animated: true)
+        picker1.flash(Colors.yellow)
+        picker5.flash(Colors.gray)
     }
     
     private func drawValues() {
@@ -170,6 +171,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         self.disableBetIfNeeded()
         
+    }
+    
+    private func draw() {
+        //update the UI
+        self.drawReels()
+        self.drawValues()
     }
     
     private func disableBetIfNeeded() {
@@ -208,7 +215,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         sender.pulsate()
         
         game.spin()
-        drawReels()
+        self.draw()
     }
 }
 

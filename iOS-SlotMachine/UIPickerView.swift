@@ -1,12 +1,3 @@
-//
-//  UIPickerView.swift
-//  iOS-SlotMachine
-//
-//  Created by Student on 2018-01-31.
-//  Copyright © 2018 Rafael Matos. All rights reserved.
-//
-
-import Foundation
 import UIKit
 
 extension UIPickerView {
@@ -18,7 +9,19 @@ extension UIPickerView {
         self.layer.borderColor = Colors.watermelonDarkGreen.cgColor
     }
     
-    func flash() {
+    func flash(_ color: UIColor) {
+        UIView.animate(withDuration: 0.2, delay: 0.2, animations: {
+            self.backgroundColor = color
+        }, completion: flashFade)
         
+    }
+    
+    private func flashFade(_ finished: Bool) {
+        if (!finished) {
+            return
+        }
+        UIView.animate(withDuration: 2.0, animations: {
+            self.backgroundColor = Colors.watermelonLightGreen
+        }, completion: nil)
     }
 }
