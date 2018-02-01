@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate {
-
-    let colors = Colors()
     
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
@@ -76,15 +74,15 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     private func draw() {
         
-        spinButton.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        spinButton.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         spinButton.layer.borderWidth = 6
         spinButton.layer.cornerRadius = spinButton.frame.width / 2
         
-        moneyTable.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        moneyTable.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         moneyTable.layer.borderWidth = 2
         moneyTable.layer.cornerRadius = 20
         
-        betTable.layer.borderColor = colors.watermelonDarkGreen.cgColor
+        betTable.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         betTable.layer.borderWidth = 2
         betTable.layer.cornerRadius = 20
         
@@ -104,20 +102,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     // PICKERVIEW DRAWING
     
     private func setAllPickersColor() {
-        setPickerColor(Picker: picker1)
-        setPickerColor(Picker: picker2)
-        setPickerColor(Picker: picker3)
-        setPickerColor(Picker: picker4)
-        setPickerColor(Picker: picker5)
+        picker1.paint()
+        picker2.paint()
+        picker3.paint()
+        picker4.paint()
+        picker5.paint()
     }
     
-    private func setPickerColor(Picker picker: UIPickerView) {
-        picker.backgroundColor = colors.watermelonLightGreen
-        picker.layer.borderWidth = 6
-        picker.layer.cornerRadius = 20
-        picker.layer.borderColor = colors.watermelonDarkGreen.cgColor
-    }
-
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -211,8 +202,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         }
         self.drawValues()
     }
-    
-    
     
     @IBAction func spin(_ sender: UIButton) {
 

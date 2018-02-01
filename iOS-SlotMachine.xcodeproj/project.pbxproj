@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F2895CA20214BFD00DCFD4A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2895C920214BFD00DCFD4A /* UIButton.swift */; };
 		3F2895CE20215C6200DCFD4A /* SlotMachineEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */; };
+		3FCED3092022930A00B9A282 /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCED3082022930A00B9A282 /* UIPickerView.swift */; };
 		3FD7B2CA201816660054D198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2C9201816660054D198 /* AppDelegate.swift */; };
 		3FD7B2CC201816660054D198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2CB201816660054D198 /* ViewController.swift */; };
 		3FD7B2CF201816660054D198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7B2CD201816660054D198 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		3F2895C920214BFD00DCFD4A /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineEngine.swift; sourceTree = "<group>"; };
+		3FCED3082022930A00B9A282 /* UIPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
 		3FD7B2C6201816660054D198 /* iOS-SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SlotMachine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD7B2C9201816660054D198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD7B2CB201816660054D198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3FD7B2E920181A790054D198 /* Colors.swift */,
 				3F2895C920214BFD00DCFD4A /* UIButton.swift */,
 				3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */,
+				3FCED3082022930A00B9A282 /* UIPickerView.swift */,
 			);
 			path = "iOS-SlotMachine";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCED3092022930A00B9A282 /* UIPickerView.swift in Sources */,
 				3FD7B2CC201816660054D198 /* ViewController.swift in Sources */,
 				3F2895CE20215C6200DCFD4A /* SlotMachineEngine.swift in Sources */,
 				3FD7B2EA20181A790054D198 /* Colors.swift in Sources */,
