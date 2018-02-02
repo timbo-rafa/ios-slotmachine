@@ -10,10 +10,6 @@
 		3F2895CA20214BFD00DCFD4A /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2895C920214BFD00DCFD4A /* UIButton.swift */; };
 		3F2895CE20215C6200DCFD4A /* SlotMachineEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */; };
 		3F91064F2023E4F6001F014A /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91064E2023E4F6001F014A /* AnimatedLabel.swift */; };
-		3F91066E2023F05A001F014A /* CTPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9106672023F05A001F014A /* CTPAppDelegate.m */; };
-		3F91066F2023F05A001F014A /* CTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9106692023F05A001F014A /* CTPViewController.m */; };
-		3F9106702023F05A001F014A /* CTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F91066B2023F05A001F014A /* CTPViewController.xib */; };
-		3F9106712023F05A001F014A /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F91066D2023F05A001F014A /* UICountingLabel.m */; };
 		3FCED3092022930A00B9A282 /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCED3082022930A00B9A282 /* UIPickerView.swift */; };
 		3FD7B2CA201816660054D198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2C9201816660054D198 /* AppDelegate.swift */; };
 		3FD7B2CC201816660054D198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2CB201816660054D198 /* ViewController.swift */; };
@@ -38,14 +34,6 @@
 		3F2895C920214BFD00DCFD4A /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotMachineEngine.swift; sourceTree = "<group>"; };
 		3F91064E2023E4F6001F014A /* AnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
-		3F9106662023F05A001F014A /* CTPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPAppDelegate.h; path = ../../UICountingLabel/CountingTestProject/CTPAppDelegate.h; sourceTree = "<group>"; };
-		3F9106672023F05A001F014A /* CTPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPAppDelegate.m; path = ../../UICountingLabel/CountingTestProject/CTPAppDelegate.m; sourceTree = "<group>"; };
-		3F9106682023F05A001F014A /* CTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPViewController.h; path = ../../UICountingLabel/CountingTestProject/CTPViewController.h; sourceTree = "<group>"; };
-		3F9106692023F05A001F014A /* CTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPViewController.m; path = ../../UICountingLabel/CountingTestProject/CTPViewController.m; sourceTree = "<group>"; };
-		3F91066A2023F05A001F014A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CTPViewController.xib; sourceTree = "<group>"; };
-		3F91066C2023F05A001F014A /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICountingLabel.h; path = "/Users/student/timbo-xcode/UICountingLabel/CountingTestProject/../UICountingLabel.h"; sourceTree = "<absolute>"; };
-		3F91066D2023F05A001F014A /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICountingLabel.m; path = "/Users/student/timbo-xcode/UICountingLabel/CountingTestProject/../UICountingLabel.m"; sourceTree = "<absolute>"; };
-		3F91067D2023F226001F014A /* iOS-SlotMachine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-SlotMachine-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FCED3082022930A00B9A282 /* UIPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
 		3FD7B2C6201816660054D198 /* iOS-SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SlotMachine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD7B2C9201816660054D198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,20 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F9106802023F7BA001F014A /* UICountingLabel */ = {
-			isa = PBXGroup;
-			children = (
-				3F9106662023F05A001F014A /* CTPAppDelegate.h */,
-				3F9106672023F05A001F014A /* CTPAppDelegate.m */,
-				3F9106682023F05A001F014A /* CTPViewController.h */,
-				3F9106692023F05A001F014A /* CTPViewController.m */,
-				3F91066B2023F05A001F014A /* CTPViewController.xib */,
-				3F91066C2023F05A001F014A /* UICountingLabel.h */,
-				3F91066D2023F05A001F014A /* UICountingLabel.m */,
-			);
-			name = UICountingLabel;
-			sourceTree = "<group>";
-		};
 		3FD7B2BD201816660054D198 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +87,6 @@
 		3FD7B2C8201816660054D198 /* iOS-SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
-				3F9106802023F7BA001F014A /* UICountingLabel */,
 				3F91064E2023E4F6001F014A /* AnimatedLabel.swift */,
 				3FD7B2C9201816660054D198 /* AppDelegate.swift */,
 				3FD7B2CB201816660054D198 /* ViewController.swift */,
@@ -125,7 +98,6 @@
 				3F2895C920214BFD00DCFD4A /* UIButton.swift */,
 				3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */,
 				3FCED3082022930A00B9A282 /* UIPickerView.swift */,
-				3F91067D2023F226001F014A /* iOS-SlotMachine-Bridging-Header.h */,
 			);
 			path = "iOS-SlotMachine";
 			sourceTree = "<group>";
@@ -225,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9106702023F05A001F014A /* CTPViewController.xib in Resources */,
 				3FD7B2D4201816660054D198 /* LaunchScreen.storyboard in Resources */,
 				3FD7B2D1201816660054D198 /* Assets.xcassets in Resources */,
 				3FD7B2CF201816660054D198 /* Main.storyboard in Resources */,
@@ -247,14 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F91064F2023E4F6001F014A /* AnimatedLabel.swift in Sources */,
-				3F91066F2023F05A001F014A /* CTPViewController.m in Sources */,
 				3FCED3092022930A00B9A282 /* UIPickerView.swift in Sources */,
 				3FD7B2CC201816660054D198 /* ViewController.swift in Sources */,
 				3F2895CE20215C6200DCFD4A /* SlotMachineEngine.swift in Sources */,
 				3FD7B2EA20181A790054D198 /* Colors.swift in Sources */,
 				3FD7B2CA201816660054D198 /* AppDelegate.swift in Sources */,
-				3F9106712023F05A001F014A /* UICountingLabel.m in Sources */,
-				3F91066E2023F05A001F014A /* CTPAppDelegate.m in Sources */,
 				3F2895CA20214BFD00DCFD4A /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,15 +246,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F91066B2023F05A001F014A /* CTPViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F91066A2023F05A001F014A /* en */,
-			);
-			name = CTPViewController.xib;
-			path = ../../UICountingLabel/CountingTestProject;
-			sourceTree = "<group>";
-		};
 		3FD7B2CD201816660054D198 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -409,7 +368,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mapd714.iOS-SlotMachine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./iOS-SlotMachine/iOS-SlotMachine-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -425,7 +383,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mapd714.iOS-SlotMachine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./iOS-SlotMachine/iOS-SlotMachine-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
