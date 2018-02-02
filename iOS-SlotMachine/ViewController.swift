@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate {
+
+    static let ANIMATION_DELAY = 0.2
+    static let ANIMATION_INTERVAL = 1.0
+    static let ANIMATION_FLASH_INTERVAL = 0.2
+    static let ANIMATION_COUNTING_INTERVAL = 1.0
     
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
@@ -51,14 +56,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var moneyLabel: UILabel!
     
-    @IBOutlet weak var money: UILabel!
-    @IBOutlet weak var bet: UILabel!
-    @IBOutlet weak var jackpot: UILabel!
+    //UI placeholders, reserve space on storyboard for actual variables below
+    @IBOutlet weak var _money: UILabel!
+    @IBOutlet weak var _bet: UILabel!
+    @IBOutlet weak var _jackpot: UILabel!
+    
+    //Animated-counting labels
+    var money: AnimatedLabel
+    var bet: AnimatedLabel
+    var jackpot: AnimatedLabel
+    
+    @IBOutlet weak var payout: UILabel!
     
     @IBOutlet weak var jackpotHeader: UIView!
     
     required init?(coder aDecoder: NSCoder) {
         self.game = SlotMachineEngine(FruitsCount: fruits.count)
+        
+        self.money = AnimatedLabel()
+        self.bet = AnimatedLabel()
+        self.jackpot = AnimatedLabel()
+        
         super.init(coder: aDecoder)
         
         //fatalError("init(coder:) has not been implemented")
@@ -67,8 +85,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.paint()
+
+        self.setupAnimatedLabels()
         
         self.draw()
+    }
+    
+    private func setupAnimatedLabels() {
+        //substitute UILabels to AnimatedLabels
+        
+        money.copyLabel(Label:_money)
+        _money.isHidden = true
+        moneyTable.addSubview(money)
+        
+        bet.copyLabel(Label: _bet)
+        _bet.isHidden = true
+        betTable.addSubview(bet)
+        
+        jackpot.copyLabel(Label: _jackpot)
+        _jackpot.isHidden = true
+        jackpotHeader.addSubview(jackpot)
+        
     }
     
     private func paint() {
@@ -84,6 +121,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         betTable.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         betTable.layer.borderWidth = 2
         betTable.layer.cornerRadius = 20
+        
+        //payout.isEnabled =
         
         jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 2
         setAllPickersColor()
@@ -165,16 +204,20 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func drawValues() {
-        self.money.text   = "$" + String(game.money)
-        self.bet.text     = "$" + String(game.bet)
-        self.jackpot.text = "$" + String(game.jackpot)
+        self.money.countFromCurrent(to: Float(game.money), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+        self.bet.countFromCurrent(to: Float(game.bet), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+        self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+        
+        //self.money.countFromCurrent(to: Float(game.money), duration: ViewController.ANIMATION_INTERVAL) // String(game.money)
+        //self.bet.text     = "$" + String(game.bet)
+        //self.jackpot.text = "$" + String(game.jackpot)
         
         self.disableBetIfNeeded()
         
     }
     
     private func draw() {
-        //update the UI
+        //update the UI on each game tick
         self.drawReels()
         self.drawValues()
     }

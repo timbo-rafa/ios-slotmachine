@@ -10,7 +10,7 @@ extension UIPickerView {
     }
     
     func flash(_ color: UIColor) {
-        UIView.animate(withDuration: 0.2, delay: 0.2, animations: {
+        UIView.animate(withDuration: ViewController.ANIMATION_FLASH_INTERVAL, delay: ViewController.ANIMATION_DELAY, animations: {
             self.backgroundColor = color
         }, completion: flashFade)
         
@@ -20,7 +20,7 @@ extension UIPickerView {
         if (!finished) {
             return
         }
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: ViewController.ANIMATION_INTERVAL, animations: {
             self.backgroundColor = Colors.watermelonLightGreen
         }, completion: nil)
     }
