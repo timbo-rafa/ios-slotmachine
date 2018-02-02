@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     static let ANIMATION_INTERVAL = 1.0
     static let ANIMATION_FLASH_INTERVAL = 0.2
     static let ANIMATION_COUNTING_INTERVAL = 1.0
+    static let ANIMATION_OFFSET: CGFloat = 40
     
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
@@ -256,6 +257,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func spin(_ sender: UIButton) {
 
         sender.pulsate()
+        payout.pop()
         
         game.spin()
         self.draw()
