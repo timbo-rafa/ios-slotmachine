@@ -169,14 +169,14 @@
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-AF-cnP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-AF-cnP">
                                         <rect key="frame" x="28" y="43" width="75" height="77"/>
                                         <state key="normal" image="small-bet"/>
                                         <connections>
                                             <action selector="betFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ym5-tz-pBH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
                                         <rect key="frame" x="140" y="43" width="75" height="77"/>
                                         <state key="normal" image="big-bet"/>
                                         <connections>
@@ -252,6 +252,7 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="yCW-vf-HL3" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="0uv-j1-SLE"/>
+                            <constraint firstItem="8rp-AF-cnP" firstAttribute="height" secondItem="FhG-Tv-0Wp" secondAttribute="height" id="1dR-07-Xgu"/>
                             <constraint firstItem="yCW-vf-HL3" firstAttribute="top" secondItem="dgv-zx-fdk" secondAttribute="bottom" constant="20" id="1wx-ck-H1o"/>
                             <constraint firstAttribute="trailing" secondItem="dgv-zx-fdk" secondAttribute="trailing" constant="152" id="2Wv-35-GzK"/>
                             <constraint firstItem="dgv-zx-fdk" firstAttribute="top" secondItem="B6Y-1c-CXi" secondAttribute="top" id="3Z8-jW-2p0"/>
@@ -266,9 +267,12 @@
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="height" secondItem="NgY-72-Dmx" secondAttribute="height" id="LNM-th-DER"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Trw-SM-T8m"/>
                             <constraint firstItem="WmW-4F-C6C" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="aAW-dt-vzO"/>
+                            <constraint firstItem="kuT-Yn-Wdr" firstAttribute="height" secondItem="bA9-Fs-5Vm" secondAttribute="height" id="aiO-c1-hVX"/>
+                            <constraint firstItem="kuT-Yn-Wdr" firstAttribute="width" secondItem="bA9-Fs-5Vm" secondAttribute="width" id="biU-tQ-wHA"/>
                             <constraint firstItem="NgY-72-Dmx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="226" id="bsE-cP-Axz"/>
                             <constraint firstAttribute="trailing" secondItem="B6Y-1c-CXi" secondAttribute="trailing" id="ccD-ko-npA"/>
                             <constraint firstItem="sw2-Ke-EhA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="240" id="dzY-z2-2si"/>
+                            <constraint firstItem="8rp-AF-cnP" firstAttribute="width" secondItem="FhG-Tv-0Wp" secondAttribute="width" id="eK2-SC-zrf"/>
                             <constraint firstItem="WHx-UJ-OS1" firstAttribute="leading" secondItem="NgY-72-Dmx" secondAttribute="leading" id="fmg-P3-HSR"/>
                             <constraint firstItem="B6Y-1c-CXi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g8A-mP-8Hk"/>
                             <constraint firstItem="WHx-UJ-OS1" firstAttribute="trailing" secondItem="NgY-72-Dmx" secondAttribute="trailing" id="gZv-hD-Fmx"/>
