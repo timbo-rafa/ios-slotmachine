@@ -85,6 +85,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         //fatalError("init(coder:) has not been implemented")
     }
     
+    
+    @IBAction func pressQuit(_ sender: UIButton) {
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.paint()
