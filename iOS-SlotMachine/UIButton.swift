@@ -18,5 +18,9 @@ extension UIButton {
         layer.add(press, forKey: nil)
     }
     
-    
+    func buttonize(_ borderWidth: CGFloat = 6, _ cornerRadius: CGFloat) {
+        self.layer.borderColor = Colors.watermelonDarkGreen.cgColor
+        self.layer.borderWidth = borderWidth
+        self.layer.cornerRadius = cornerRadius
+    }
 }

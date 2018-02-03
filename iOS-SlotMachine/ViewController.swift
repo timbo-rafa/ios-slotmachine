@@ -45,6 +45,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var picker5: UIPickerView!
     
+    @IBOutlet weak var quitButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var spinButton: UIButton!
     @IBOutlet weak var fiveButton: UIButton!
     @IBOutlet weak var fiftyButton: UIButton!
@@ -111,9 +113,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     private func paint() {
         // stylize the game
-        spinButton.layer.borderColor = Colors.watermelonDarkGreen.cgColor
-        spinButton.layer.borderWidth = 6
-        spinButton.layer.cornerRadius = spinButton.frame.width / 2
+        //spinButton.layer.borderColor = Colors.watermelonDarkGreen.cgColor
+        //spinButton.layer.borderWidth = 6
+        //spinButton.layer.cornerRadius = spinButton.frame.width / 2
+        
+        spinButton.buttonize(6, spinButton.frame.width / 2)
+        quitButton.buttonize(3, quitButton.frame.height / 3)
+        resetButton.buttonize(3, quitButton.frame.height / 3)
         
         moneyTable.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         moneyTable.layer.borderWidth = 2
@@ -125,10 +131,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         //payout.isEnabled =
         
-        jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 2
+        jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 3
         setAllPickersColor()
         disablePickerUserInteraction()
     }
+    
+
     
     private func disablePickerUserInteraction() {
         picker1.isUserInteractionEnabled = false
