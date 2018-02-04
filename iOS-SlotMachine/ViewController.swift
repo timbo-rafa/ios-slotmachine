@@ -88,7 +88,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func pressQuit(_ sender: UIButton) {
         //suspend the app in second plan
-        //test new branch
+        //test old branch
         UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
     

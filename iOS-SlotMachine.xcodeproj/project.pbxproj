@@ -19,6 +19,7 @@
 		3FD7B2D4201816660054D198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7B2D2201816660054D198 /* LaunchScreen.storyboard */; };
 		3FD7B2DF201816670054D198 /* iOS_SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2DE201816670054D198 /* iOS_SlotMachineTests.swift */; };
 		3FD7B2EA20181A790054D198 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2E920181A790054D198 /* Colors.swift */; };
+		F52AC0C32026B4C4009C224A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F52AC0C22026B4C4009C224A /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3FD7B2DE201816670054D198 /* iOS_SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_SlotMachineTests.swift; sourceTree = "<group>"; };
 		3FD7B2E0201816670054D198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD7B2E920181A790054D198 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F52AC0C22026B4C4009C224A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../../../../Downloads/splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3F2895CD20215C6200DCFD4A /* SlotMachineEngine.swift */,
 				3FCED3082022930A00B9A282 /* UIPickerView.swift */,
 				3F9106812024131F001F014A /* UILabel.swift */,
+				F52AC0C22026B4C4009C224A /* splash.png */,
 			);
 			path = "iOS-SlotMachine";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52AC0C32026B4C4009C224A /* splash.png in Resources */,
 				3FD7B2D4201816660054D198 /* LaunchScreen.storyboard in Resources */,
 				3FD7B2D1201816660054D198 /* Assets.xcassets in Resources */,
 				3FD7B2CF201816660054D198 /* Main.storyboard in Resources */,
