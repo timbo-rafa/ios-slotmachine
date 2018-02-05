@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SpriteKit
 
 class ViewController: UIViewController, UIPickerViewDelegate {
 
@@ -16,6 +17,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     static let ANIMATION_FLASH_INTERVAL = 0.2
     static let ANIMATION_COUNTING_INTERVAL = 1.0
     static let ANIMATION_OFFSET: CGFloat = 40
+    
+    var coinPlayer = AVAudioPlayer()
     
     
     
@@ -69,7 +72,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     ]
 */
     
- var game: SlotMachineEngine
+    var game: SlotMachineEngine
     
     @IBOutlet weak var picker1: UIPickerView!
     
@@ -116,6 +119,18 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.jackpot = AnimatedLabel()
         
         super.init(coder: aDecoder)
+        
+        //Music for the coins
+        let coinMusic = Bundle.main.path(forResource: "insertingCoin", ofType: "mp3")
+        do {
+            coinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: coinMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
+        
         
         //fatalError("init(coder:) has not been implemented")
     }
@@ -284,11 +299,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
     @IBAction func insertFive(_ sender: UIButton) {
         game.insert(Value:5)
+        coinPlayer.play()
         self.drawValues()
     }
     
     @IBAction func insertFifty(_ sender: UIButton) {
         game.insert(Value:50)
+        coinPlayer.play()
         self.drawValues()
     }
     
@@ -297,6 +314,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             print("Not enough Money to bet 5")
         }
         self.drawValues()
+        coinPlayer.play()
     }
     
     @IBAction func betFifty(_ sender: UIButton) {
@@ -304,6 +322,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             print("Not enough Money to bet 50")
         }
         self.drawValues()
+        coinPlayer.play()
     }
     
     @IBAction func spin(_ sender: UIButton) {
