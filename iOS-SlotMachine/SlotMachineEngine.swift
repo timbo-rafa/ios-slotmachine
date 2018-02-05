@@ -1,4 +1,6 @@
 import Foundation
+import AVFoundation
+import AVKit
 
 class SlotMachineEngine {
     
@@ -18,6 +20,11 @@ class SlotMachineEngine {
     var disableFive: Bool
     var disableFifty: Bool
     var nullBet: Bool
+    
+    //sounds
+    //var spinAudio = AVAudioPlayer(contentsOf: <#T##URL#>, fileTypeHint: <#T##String?#>)
+    
+    //var spinAudio2 = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: Bundle.mainBundle.pathForResource("itemreel", ofType: "wav")!), error: nil)
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -117,6 +124,9 @@ class SlotMachineEngine {
     }
     
     private func spinReels() -> Int {
+        
+        
+        
         self.selected1 = rand()
         self.selected2 = rand()
         self.selected3 = rand()

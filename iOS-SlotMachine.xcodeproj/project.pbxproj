@@ -20,6 +20,27 @@
 		3FD7B2DF201816670054D198 /* iOS_SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2DE201816670054D198 /* iOS_SlotMachineTests.swift */; };
 		3FD7B2EA20181A790054D198 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7B2E920181A790054D198 /* Colors.swift */; };
 		F508AEA02027FD8900831554 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = F508AE9F2027FD8900831554 /* splash.png */; };
+		F508AEB72028067400831554 /* medium-gulp-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA22028067300831554 /* medium-gulp-2.mp3 */; };
+		F508AEB82028067400831554 /* itemreel.wav in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA32028067300831554 /* itemreel.wav */; };
+		F508AEB92028067400831554 /* light-bite-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA42028067300831554 /* light-bite-2.mp3 */; };
+		F508AEBA2028067400831554 /* strong-bite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA52028067400831554 /* strong-bite.mp3 */; };
+		F508AEBB2028067400831554 /* light-bite-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA62028067400831554 /* light-bite-1.mp3 */; };
+		F508AEBC2028067500831554 /* short-payout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA72028067400831554 /* short-payout.mp3 */; };
+		F508AEBD2028067500831554 /* fly-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA82028067400831554 /* fly-1.mp3 */; };
+		F508AEBE2028067500831554 /* insertingCoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEA92028067400831554 /* insertingCoin.mp3 */; };
+		F508AEBF2028067500831554 /* deep-gulp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAA2028067400831554 /* deep-gulp.mp3 */; };
+		F508AEC02028067500831554 /* fly-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAB2028067400831554 /* fly-2.mp3 */; };
+		F508AEC12028067500831554 /* medium-gulp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAC2028067400831554 /* medium-gulp.mp3 */; };
+		F508AEC22028067500831554 /* medium-payout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAD2028067400831554 /* medium-payout.mp3 */; };
+		F508AEC32028067500831554 /* rich-payout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAE2028067400831554 /* rich-payout.mp3 */; };
+		F508AEC42028067500831554 /* fly-fade-out.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEAF2028067400831554 /* fly-fade-out.mp3 */; };
+		F508AEC52028067500831554 /* mushy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB02028067400831554 /* mushy.mp3 */; };
+		F508AEC62028067500831554 /* fly-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB12028067400831554 /* fly-3.mp3 */; };
+		F508AEC72028067500831554 /* gotitem.wav in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB22028067400831554 /* gotitem.wav */; };
+		F508AEC82028067500831554 /* medium-bite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB32028067400831554 /* medium-bite.mp3 */; };
+		F508AEC92028067500831554 /* light-gulp.wav in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB42028067400831554 /* light-gulp.wav */; };
+		F508AECA2028067500831554 /* fly-buzz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB52028067400831554 /* fly-buzz.mp3 */; };
+		F508AECB2028067500831554 /* light-gulp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F508AEB62028067400831554 /* light-gulp.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +71,27 @@
 		3FD7B2E0201816670054D198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FD7B2E920181A790054D198 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F508AE9F2027FD8900831554 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../../../../Downloads/splash.png; sourceTree = "<group>"; };
+		F508AEA22028067300831554 /* medium-gulp-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "medium-gulp-2.mp3"; sourceTree = "<group>"; };
+		F508AEA32028067300831554 /* itemreel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = itemreel.wav; sourceTree = "<group>"; };
+		F508AEA42028067300831554 /* light-bite-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "light-bite-2.mp3"; sourceTree = "<group>"; };
+		F508AEA52028067400831554 /* strong-bite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "strong-bite.mp3"; sourceTree = "<group>"; };
+		F508AEA62028067400831554 /* light-bite-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "light-bite-1.mp3"; sourceTree = "<group>"; };
+		F508AEA72028067400831554 /* short-payout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "short-payout.mp3"; sourceTree = "<group>"; };
+		F508AEA82028067400831554 /* fly-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fly-1.mp3"; sourceTree = "<group>"; };
+		F508AEA92028067400831554 /* insertingCoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = insertingCoin.mp3; sourceTree = "<group>"; };
+		F508AEAA2028067400831554 /* deep-gulp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "deep-gulp.mp3"; sourceTree = "<group>"; };
+		F508AEAB2028067400831554 /* fly-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fly-2.mp3"; sourceTree = "<group>"; };
+		F508AEAC2028067400831554 /* medium-gulp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "medium-gulp.mp3"; sourceTree = "<group>"; };
+		F508AEAD2028067400831554 /* medium-payout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "medium-payout.mp3"; sourceTree = "<group>"; };
+		F508AEAE2028067400831554 /* rich-payout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "rich-payout.mp3"; sourceTree = "<group>"; };
+		F508AEAF2028067400831554 /* fly-fade-out.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fly-fade-out.mp3"; sourceTree = "<group>"; };
+		F508AEB02028067400831554 /* mushy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mushy.mp3; sourceTree = "<group>"; };
+		F508AEB12028067400831554 /* fly-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fly-3.mp3"; sourceTree = "<group>"; };
+		F508AEB22028067400831554 /* gotitem.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gotitem.wav; sourceTree = "<group>"; };
+		F508AEB32028067400831554 /* medium-bite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "medium-bite.mp3"; sourceTree = "<group>"; };
+		F508AEB42028067400831554 /* light-gulp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "light-gulp.wav"; sourceTree = "<group>"; };
+		F508AEB52028067400831554 /* fly-buzz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "fly-buzz.mp3"; sourceTree = "<group>"; };
+		F508AEB62028067400831554 /* light-gulp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "light-gulp.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +133,7 @@
 		3FD7B2C8201816660054D198 /* iOS-SlotMachine */ = {
 			isa = PBXGroup;
 			children = (
+				F508AEA12028059E00831554 /* Sounds */,
 				3F91064E2023E4F6001F014A /* AnimatedLabel.swift */,
 				3FD7B2C9201816660054D198 /* AppDelegate.swift */,
 				3FD7B2CB201816660054D198 /* ViewController.swift */,
@@ -115,6 +158,34 @@
 				3FD7B2E0201816670054D198 /* Info.plist */,
 			);
 			path = "iOS-SlotMachineTests";
+			sourceTree = "<group>";
+		};
+		F508AEA12028059E00831554 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F508AEAA2028067400831554 /* deep-gulp.mp3 */,
+				F508AEA82028067400831554 /* fly-1.mp3 */,
+				F508AEAB2028067400831554 /* fly-2.mp3 */,
+				F508AEB12028067400831554 /* fly-3.mp3 */,
+				F508AEB52028067400831554 /* fly-buzz.mp3 */,
+				F508AEAF2028067400831554 /* fly-fade-out.mp3 */,
+				F508AEB22028067400831554 /* gotitem.wav */,
+				F508AEA92028067400831554 /* insertingCoin.mp3 */,
+				F508AEA32028067300831554 /* itemreel.wav */,
+				F508AEA62028067400831554 /* light-bite-1.mp3 */,
+				F508AEA42028067300831554 /* light-bite-2.mp3 */,
+				F508AEB62028067400831554 /* light-gulp.mp3 */,
+				F508AEB42028067400831554 /* light-gulp.wav */,
+				F508AEB32028067400831554 /* medium-bite.mp3 */,
+				F508AEA22028067300831554 /* medium-gulp-2.mp3 */,
+				F508AEAC2028067400831554 /* medium-gulp.mp3 */,
+				F508AEAD2028067400831554 /* medium-payout.mp3 */,
+				F508AEB02028067400831554 /* mushy.mp3 */,
+				F508AEAE2028067400831554 /* rich-payout.mp3 */,
+				F508AEA72028067400831554 /* short-payout.mp3 */,
+				F508AEA52028067400831554 /* strong-bite.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +274,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F508AEB92028067400831554 /* light-bite-2.mp3 in Resources */,
+				F508AEBB2028067400831554 /* light-bite-1.mp3 in Resources */,
+				F508AECB2028067500831554 /* light-gulp.mp3 in Resources */,
 				3FD7B2D4201816660054D198 /* LaunchScreen.storyboard in Resources */,
+				F508AEC82028067500831554 /* medium-bite.mp3 in Resources */,
+				F508AEC52028067500831554 /* mushy.mp3 in Resources */,
+				F508AECA2028067500831554 /* fly-buzz.mp3 in Resources */,
 				3FD7B2D1201816660054D198 /* Assets.xcassets in Resources */,
+				F508AEBD2028067500831554 /* fly-1.mp3 in Resources */,
+				F508AEBA2028067400831554 /* strong-bite.mp3 in Resources */,
+				F508AEBC2028067500831554 /* short-payout.mp3 in Resources */,
+				F508AEC72028067500831554 /* gotitem.wav in Resources */,
+				F508AEBE2028067500831554 /* insertingCoin.mp3 in Resources */,
 				3FD7B2CF201816660054D198 /* Main.storyboard in Resources */,
+				F508AEB82028067400831554 /* itemreel.wav in Resources */,
 				F508AEA02027FD8900831554 /* splash.png in Resources */,
+				F508AEC42028067500831554 /* fly-fade-out.mp3 in Resources */,
+				F508AEB72028067400831554 /* medium-gulp-2.mp3 in Resources */,
+				F508AEC62028067500831554 /* fly-3.mp3 in Resources */,
+				F508AEC92028067500831554 /* light-gulp.wav in Resources */,
+				F508AEC12028067500831554 /* medium-gulp.mp3 in Resources */,
+				F508AEBF2028067500831554 /* deep-gulp.mp3 in Resources */,
+				F508AEC02028067500831554 /* fly-2.mp3 in Resources */,
+				F508AEC32028067500831554 /* rich-payout.mp3 in Resources */,
+				F508AEC22028067500831554 /* medium-payout.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
