@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate {
 
@@ -15,6 +16,10 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     static let ANIMATION_FLASH_INTERVAL = 0.2
     static let ANIMATION_COUNTING_INTERVAL = 1.0
     static let ANIMATION_OFFSET: CGFloat = 40
+    
+    
+    
+    
 
 /*
     // Original UIImage
@@ -128,6 +133,10 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.setupAnimatedLabels()
         
         self.draw()
+        
+        
+        
+        
     }
     
     private func setupAnimatedLabels() {
@@ -298,11 +307,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func spin(_ sender: UIButton) {
-
         sender.pulsate()
+        //spinPlayer.play()
         payout.text = game.spin()
         payout.pop()
         self.draw()
+        //spinPlayer.stop()
     }
     
     @IBAction func reset(_ sender: UIButton) {

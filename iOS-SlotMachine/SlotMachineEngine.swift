@@ -1,6 +1,7 @@
 import Foundation
 import AVFoundation
-import AVKit
+import SpriteKit
+import UIKit
 
 class SlotMachineEngine {
     
@@ -21,10 +22,7 @@ class SlotMachineEngine {
     var disableFifty: Bool
     var nullBet: Bool
     
-    //sounds
-    //var spinAudio = AVAudioPlayer(contentsOf: <#T##URL#>, fileTypeHint: <#T##String?#>)
-    
-    //var spinAudio2 = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: Bundle.mainBundle.pathForResource("itemreel", ofType: "wav")!), error: nil)
+    var spinPlayer = AVAudioPlayer()
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -62,6 +60,20 @@ class SlotMachineEngine {
         self.disableFive = true
         self.disableFifty = true
         self.nullBet = true
+        
+        let spinMusic = Bundle.main.path(forResource: "itemreel", ofType: "wav")
+        
+        do {
+            spinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: spinMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
+        
+        
+        
     }
     
     public func spin() -> String {
@@ -125,8 +137,9 @@ class SlotMachineEngine {
     
     private func spinReels() -> Int {
         
-        
-        
+        //Spin Sound
+        spinPlayer.play()
+
         self.selected1 = rand()
         self.selected2 = rand()
         self.selected3 = rand()
@@ -207,6 +220,7 @@ class SlotMachineEngine {
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
         print("Bonus = ", bonus)  // write bonus in the log
+        //spinPlayer.stop()
         return bonus
     }
     
