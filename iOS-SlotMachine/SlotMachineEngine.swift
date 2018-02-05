@@ -23,6 +23,10 @@ class SlotMachineEngine {
     var nullBet: Bool
     
     var spinPlayer = AVAudioPlayer()
+    var flyPlayer  = AVAudioPlayer()
+    var shortPayOutPlayer = AVAudioPlayer()
+    var richPayOutPlayer = AVAudioPlayer()
+    var lostPlayer = AVAudioPlayer()
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -61,8 +65,8 @@ class SlotMachineEngine {
         self.disableFifty = true
         self.nullBet = true
         
+        //Music for the spin
         let spinMusic = Bundle.main.path(forResource: "itemreel", ofType: "wav")
-        
         do {
             spinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: spinMusic! ))
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
@@ -72,6 +76,49 @@ class SlotMachineEngine {
             print(error)
         }
         
+        //music for the fly
+        let flyMusic = Bundle.main.path(forResource: "fly-fade-out", ofType: "mp3")
+        do {
+            flyPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: flyMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
+        
+        //music for the short pay
+        let shortPayoutMusic = Bundle.main.path(forResource: "short-payout", ofType: "mp3")
+        do {
+            shortPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: shortPayoutMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
+        
+        //music for the jackpot
+        let richPayOutMusic = Bundle.main.path(forResource: "rich-payout", ofType: "mp3")
+        do {
+            richPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: richPayOutMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
+        
+        //music for the lost
+        let losttMusic = Bundle.main.path(forResource: "deep-gulp", ofType: "mp3")
+        do {
+            lostPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: losttMusic! ))
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+        }catch{
+            print(error)
+        }
         
         
     }
@@ -138,7 +185,7 @@ class SlotMachineEngine {
     private func spinReels() -> Int {
         
         //Spin Sound
-        spinPlayer.play()
+        //spinPlayer.play()
 
         self.selected1 = rand()
         self.selected2 = rand()
@@ -170,6 +217,7 @@ class SlotMachineEngine {
               
                 self.money += self.jackpot     // ***** JACKPOT WINNER *****
                 bonus = self.jackpot
+                richPayOutPlayer.play()
 
             } else {
                 
@@ -205,6 +253,9 @@ class SlotMachineEngine {
 
                 if (bonus > 0) {
                     self.money += bonus
+                    shortPayOutPlayer.play()
+                }else{
+                    lostPlayer.play()
                 }
             
                 self.bet = 0
@@ -216,11 +267,11 @@ class SlotMachineEngine {
             
             self.bet = 0
             self.nullBet = true
+            flyPlayer.play()
             
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
         print("Bonus = ", bonus)  // write bonus in the log
-        //spinPlayer.stop()
         return bonus
     }
     
@@ -243,7 +294,10 @@ class SlotMachineEngine {
         if self.selected3 == x { y = y + "T" } else { y = y + "F"}
         if self.selected4 == x { y = y + "T" } else { y = y + "F"}
         if self.selected5 == x { y = y + "T" } else { y = y + "F"}
+        //play fly - lost everything
+        //flyPlayer.play()
         return y
+        
     }
 }
 
