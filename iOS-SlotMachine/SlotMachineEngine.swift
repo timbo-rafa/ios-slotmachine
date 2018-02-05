@@ -77,7 +77,7 @@ class SlotMachineEngine {
         }
         
         //music for the fly
-        let flyMusic = Bundle.main.path(forResource: "fly-fade-out", ofType: "mp3")
+        let flyMusic = Bundle.main.path(forResource: "fly-1", ofType: "mp3")
         do {
             flyPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: flyMusic! ))
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
