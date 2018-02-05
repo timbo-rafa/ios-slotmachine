@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  iOS-SlotMachine
 //
-//  Created by Student on 2018-01-23.
+//  Created by Rafael Timbo, Fernando Ito and Sergio Brunacci on 2018-02-04.
 //  Copyright © 2018 Rafael Matos. All rights reserved.
 //
 
@@ -15,7 +15,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     static let ANIMATION_FLASH_INTERVAL = 0.2
     static let ANIMATION_COUNTING_INTERVAL = 1.0
     static let ANIMATION_OFFSET: CGFloat = 40
-    
+
+/*
+    // Original UIImage
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
         #imageLiteral(resourceName: "fly-2"),
@@ -33,7 +35,36 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "Strawberry"),
         #imageLiteral(resourceName: "Watermelon")
     ]
-    var game: SlotMachineEngine
+*/
+
+    let fruits: [UIImage] = [
+        #imageLiteral(resourceName: "fly-3"),
+        #imageLiteral(resourceName: "Apple"),
+        #imageLiteral(resourceName: "Banana"),
+        #imageLiteral(resourceName: "Cherry"),
+        #imageLiteral(resourceName: "Grape"),
+        #imageLiteral(resourceName: "Spin")
+    ]
+
+/*
+    let fruits: [UIImage] = [
+        #imageLiteral(resourceName: "fly-3"),
+        #imageLiteral(resourceName: "Apple"),
+        #imageLiteral(resourceName: "Banana"),
+        #imageLiteral(resourceName: "Cherry"),
+        #imageLiteral(resourceName: "Grape"),
+        #imageLiteral(resourceName: "Kiwi"),
+        #imageLiteral(resourceName: "Lemon"),
+        #imageLiteral(resourceName: "Mango"),
+        #imageLiteral(resourceName: "Mangosteen"),
+        #imageLiteral(resourceName: "Orange"),
+        #imageLiteral(resourceName: "Pear"),
+        #imageLiteral(resourceName: "Strawberry"),
+        #imageLiteral(resourceName: "Watermelon")
+    ]
+*/
+    
+ var game: SlotMachineEngine
     
     @IBOutlet weak var picker1: UIPickerView!
     
@@ -75,7 +106,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         self.game = SlotMachineEngine(FruitsCount: fruits.count)
-        
         self.money = AnimatedLabel()
         self.bet = AnimatedLabel()
         self.jackpot = AnimatedLabel()
@@ -88,12 +118,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func pressQuit(_ sender: UIButton) {
         //suspend the app in second plan
-        //test old branch
         UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -211,15 +237,15 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         picker3.selectRow(game.emptyRow, inComponent: 0, animated: false)
         picker4.selectRow(game.emptyRow, inComponent: 0, animated: false)
         picker5.selectRow(game.emptyRow, inComponent: 0, animated: false)
-        
+
         // display selected rows
         picker1.selectRow(game.selected1, inComponent: 0, animated: true)
         picker2.selectRow(game.selected2, inComponent: 0, animated: true)
         picker3.selectRow(game.selected3, inComponent: 0, animated: true)
         picker4.selectRow(game.selected4, inComponent: 0, animated: true)
         picker5.selectRow(game.selected5, inComponent: 0, animated: true)
-        picker1.flash(Colors.yellow)
-        picker5.flash(Colors.gray)
+//        picker1.flash(Colors.yellow)
+//        picker5.flash(Colors.gray)
     }
     
     private func drawValues() {
@@ -244,8 +270,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     private func disableBetIfNeeded() {
         betFive.isEnabled = !game.disableFive
         betFifty.isEnabled = !game.disableFifty
-        //spinButton.isEnabled = !game.nullBet
-        
+        spinButton.isEnabled = !game.nullBet
     }
 
     @IBAction func insertFive(_ sender: UIButton) {
@@ -275,10 +300,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func spin(_ sender: UIButton) {
 
         sender.pulsate()
+        payout.text = game.spin()
         payout.pop()
-        
-        game.spin()
         self.draw()
+    }
+    
+    @IBAction func reset(_ sender: UIButton) {
+        game.reset()
     }
 }
 
