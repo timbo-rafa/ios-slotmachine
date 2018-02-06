@@ -244,7 +244,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             payout.text = "$" + String( game.bonus)
             payout.pop()
         }else {
-            sound.lostPlayer.play()
+            //sound.lostPlayer.play()
             payout.text = "$0"
         }
         
@@ -281,16 +281,18 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         if (!game.bet(Value:5)) {
             print("Not enough Money to bet 5")
         }
-        self.drawValues()
         sound.coinPlayer.play()
+        self.drawValues()
+        
     }
     
     @IBAction func betFifty(_ sender: UIButton) {
         if (!game.bet(Value:50)) {
             print("Not enough Money to bet 50")
         }
-        self.drawValues()
         sound.coinPlayer.play()
+        self.drawValues()
+        
     }
     
     @IBAction func spin(_ sender: UIButton) {
