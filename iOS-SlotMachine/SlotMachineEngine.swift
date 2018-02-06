@@ -1,11 +1,11 @@
 import Foundation
-import AVFoundation
 import SpriteKit
 import UIKit
 
 class SlotMachineEngine {
     
     var fruitsCount: Int
+    var fliesCount: Int
     var selected1: Int
     var selected2: Int
     var selected3: Int
@@ -22,31 +22,29 @@ class SlotMachineEngine {
     var disableFifty: Bool
     var nullBet: Bool
     
-    var spinPlayer = AVAudioPlayer()
-    var flyPlayer  = AVAudioPlayer()
-    var shortPayOutPlayer = AVAudioPlayer()
-    var richPayOutPlayer = AVAudioPlayer()
-    var lostPlayer = AVAudioPlayer()
+    var sounds: Sound = Sound()
+    var random: Random = Random()
     
-    init(FruitsCount fruitsCount: Int) {
+    init(FruitsCount fruitsCount: Int, FliesCount fliesCount: Int = 3) {
         self.fruitsCount = fruitsCount
+        self.fliesCount = fliesCount
         self.emptyRow = self.fruitsCount
-/*
+/**/
         // start with 5 "blanks"
         self.selected1 = self.emptyRow
         self.selected2 = self.emptyRow
         self.selected3 = self.emptyRow
         self.selected4 = self.emptyRow
         self.selected5 = self.emptyRow
-*/
 /**/
+/*
         // start with 5 "Spins" (Spin image must be in the UIImage declaration
         self.selected1 = 5
         self.selected2 = 5
         self.selected3 = 5
         self.selected4 = 5
         self.selected5 = 5
-/**/
+*/
 /*
         // start with 5 "Flys"
         self.selected1 = 0
@@ -65,88 +63,19 @@ class SlotMachineEngine {
         self.disableFifty = true
         self.nullBet = true
         
-        //Music for the spin
-        let spinMusic = Bundle.main.path(forResource: "itemreel", ofType: "wav")
-        do {
-            spinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: spinMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the fly
-        let flyMusic = Bundle.main.path(forResource: "fly-1", ofType: "mp3")
-        do {
-            flyPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: flyMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the short pay
-        let shortPayoutMusic = Bundle.main.path(forResource: "short-payout", ofType: "mp3")
-        do {
-            shortPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: shortPayoutMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the jackpot
-        let richPayOutMusic = Bundle.main.path(forResource: "rich-payout", ofType: "mp3")
-        do {
-            richPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: richPayOutMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the lost
-        let losttMusic = Bundle.main.path(forResource: "deep-gulp", ofType: "mp3")
-        do {
-            lostPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: losttMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        
+        sounds.Start()
+
     }
     
-    public func spin() -> String {
-        let bonus = spinReels()
-        return "Bonus: $" + String(bonus)
+
+    
+    public func spin() {
+        spinReels()
     }
     
     public func reset() {
+        //call init?
         
-        print("Button reset clicked")
-        /*
-        self.jackpot = 0
-        self.money = 0
-        self.bet = 0
-        self.bonus = 0
-        
-        self.selected1 = 5
-        self.selected2 = 5
-        self.selected3 = 5
-        self.selected4 = 5
-        self.selected5 = 5
-        
-        self.disableFive = true
-        self.disableFifty = true
-        self.nullBet = true
-       */
     }
 
     public func insert(Value value: Int) {
@@ -210,14 +139,19 @@ class SlotMachineEngine {
 
         bonus = 0
 
-//        if (s1 > 2 && s2 > 2 && s3 > 2 && s4 > 2 && s5 > 2) {
-        if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
+        // check for flies (first rows)
+        if (s1 >= fliesCount &&
+            s2 >= fliesCount &&
+            s3 >= fliesCount &&
+            s4 >= fliesCount &&
+            s5 >= fliesCount) {
+        //if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
             
             if (s1 == s2 && s2 == s3 && s3 == s4 && s4 == s5) {
               
                 self.money += self.jackpot     // ***** JACKPOT WINNER *****
                 bonus = self.jackpot
-                richPayOutPlayer.play()
+                sounds.richPayOutPlayer.play()
 
             } else {
                 
@@ -253,9 +187,9 @@ class SlotMachineEngine {
 
                 if (bonus > 0) {
                     self.money += bonus
-                    shortPayOutPlayer.play()
+                    //sounds.shortPayOutPlayer.play()
                 }else{
-                    lostPlayer.play()
+                    //sounds.lostPlayer.play()
                 }
             
                 self.bet = 0
@@ -267,7 +201,7 @@ class SlotMachineEngine {
             
             self.bet = 0
             self.nullBet = true
-            flyPlayer.play()
+            sounds.flyPlayer.play()
             
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
@@ -276,7 +210,15 @@ class SlotMachineEngine {
     }
     
     private func rand() -> Int {
+        return self.weightedRandom()
+    }
+    
+    private func uniformRand() -> Int {
         return Int(arc4random_uniform(UInt32(self.fruitsCount)))
+    }
+    
+    private func weightedRandom() -> Int {
+        return random.weightedRandom()
     }
     
     private func setAllTo( _ row: Int) {
