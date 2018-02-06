@@ -241,5 +241,9 @@ class SlotMachineEngine {
         return y
         
     }
+    
+    public func resetBonus(){
+        self.bonus = 0
+    }
 }
 

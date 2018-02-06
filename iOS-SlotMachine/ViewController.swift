@@ -248,6 +248,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             payout.text = "$0"
         }
         
+        game.resetBonus()
+        
         self.disableBetIfNeeded()
     }
     
@@ -293,11 +295,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func spin(_ sender: UIButton) {
         sender.pulsate()
-        //spinPlayer.play()
         game.spin()
-
         self.draw()
-        //spinPlayer.stop()
+        
     }
     
     @IBAction func reset(_ sender: UIButton) {
