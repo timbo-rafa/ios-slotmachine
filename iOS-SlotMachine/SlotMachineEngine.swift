@@ -27,22 +27,22 @@ class SlotMachineEngine {
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
         self.emptyRow = self.fruitsCount
-/*
+/**/
         // start with 5 "blanks"
         self.selected1 = self.emptyRow
         self.selected2 = self.emptyRow
         self.selected3 = self.emptyRow
         self.selected4 = self.emptyRow
         self.selected5 = self.emptyRow
-*/
 /**/
+/*
         // start with 5 "Spins" (Spin image must be in the UIImage declaration
         self.selected1 = 5
         self.selected2 = 5
         self.selected3 = 5
         self.selected4 = 5
         self.selected5 = 5
-/**/
+*/
 /*
         // start with 5 "Flys"
         self.selected1 = 0
@@ -72,9 +72,6 @@ class SlotMachineEngine {
     }
     
     public func reset() {
-        
-        print("Button reset clicked")
-        
         //call init?
         
     }
@@ -140,8 +137,9 @@ class SlotMachineEngine {
 
         bonus = 0
 
-//        if (s1 > 2 && s2 > 2 && s3 > 2 && s4 > 2 && s5 > 2) {
-        if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
+        
+        if (s1 > 2 && s2 > 2 && s3 > 2 && s4 > 2 && s5 > 2) {
+        //if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
             
             if (s1 == s2 && s2 == s3 && s3 == s4 && s4 == s5) {
               

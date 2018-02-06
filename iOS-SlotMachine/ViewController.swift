@@ -178,7 +178,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return fruits.count + 1
+        return fruits.count + 1 // + 1 for starting empty row
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -296,7 +296,10 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func reset(_ sender: UIButton) {
-        game.reset()
+        //game.reset()
+        print("Reset")
+        game = SlotMachineEngine(FruitsCount: fruits.count)
+        self.draw()
     }
 }
 
