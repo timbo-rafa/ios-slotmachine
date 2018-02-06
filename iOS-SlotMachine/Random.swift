@@ -11,9 +11,9 @@ import Foundation
 class Random {
         
     // Probability of rolling each fly/fruit
-    let P_FLY_1      = 1.0
+    let P_FLY_1      = 0.5
     let P_FLY_2      = 1.0
-    let P_FLY_3      = 1.0
+    let P_FLY_3      = 0.2
     let P_APPLE      = 5.0
     let P_BANANA     = 7.0
     let P_CHERRY     = 3.0
