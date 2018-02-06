@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPi-cH-MpZ">
-                                <rect key="frame" x="-41" y="0.0" width="749" height="391"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="watermelon_splash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7lL-Ir-YYP">
+                                <rect key="frame" x="-37" y="-78" width="740" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash.png" width="1920" height="1080"/>
+        <image name="watermelon_splash.jpg" width="720" height="405"/>
     </resources>
 </document>
