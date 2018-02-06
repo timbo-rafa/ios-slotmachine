@@ -5,6 +5,8 @@ import UIKit
 class SlotMachineEngine {
     
     var fruitsCount: Int
+    var fliesCount: Int
+    var lastFlyAt: Int
     var selected1: Int
     var selected2: Int
     var selected3: Int
@@ -24,8 +26,10 @@ class SlotMachineEngine {
     var sounds: Sound = Sound()
     var random: Random = Random()
     
-    init(FruitsCount fruitsCount: Int) {
+    init(FruitsCount fruitsCount: Int, FliesCount fliesCount: Int = 3) {
         self.fruitsCount = fruitsCount
+        self.fliesCount = fliesCount
+        self.lastFlyAt = self.fliesCount - 1
         self.emptyRow = self.fruitsCount
 /**/
         // start with 5 "blanks"
@@ -137,8 +141,12 @@ class SlotMachineEngine {
 
         bonus = 0
 
-        
-        if (s1 > 2 && s2 > 2 && s3 > 2 && s4 > 2 && s5 > 2) {
+        // check for flies (first rows)
+        if (s1 > fliesCount &&
+            s2 > fliesCount &&
+            s3 > fliesCount &&
+            s4 > fliesCount &&
+            s5 > fliesCount) {
         //if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
             
             if (s1 == s2 && s2 == s3 && s3 == s4 && s4 == s5) {
