@@ -35,6 +35,7 @@ enum DecimalPoints {
 typealias OptionalCallback = (() -> Void)
 typealias OptionalFormatBlock = (() -> String)
 
+// Animated Labels that count incrementally from two numbers
 class AnimatedLabel: UILabel {
 	var completion: OptionalCallback?
 	var animationDuration: AnimationDuration = .brisk

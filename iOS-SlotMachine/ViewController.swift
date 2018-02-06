@@ -2,9 +2,14 @@
 //  ViewController.swift
 //  iOS-SlotMachine
 //
-//  Created by Rafael Timbo, Fernando Ito and Sergio Brunacci on 2018-02-04.
+//  Created by Rafael Timbo 300962678,
+//  Fernando Ito 300960367
+//  and Sergio Brunacci 300910506
+//  on 2018-02-04.
 //  Copyright © 2018 Rafael Matos. All rights reserved.
-//
+//  App: Watermelon Jackpot 1.0
+//  A Slot machine game with a kitchen theme that uses fruits as slot items, and flies as fail
+//  To win you need to get 3 or more equal fruits and no flies.
 
 import UIKit
 import SpriteKit
@@ -95,7 +100,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func pressQuit(_ sender: UIButton) {
         //suspend the app in second plan
-        //UIControl().sendAction(#selector(NSURLConnection.suspend), to: UIApplication.shared, for: nil)
+        //UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
     
     override func viewDidLoad() {
