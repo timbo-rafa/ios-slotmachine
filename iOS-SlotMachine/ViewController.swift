@@ -25,14 +25,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "fly-3"),
         #imageLiteral(resourceName: "Apple"),
         #imageLiteral(resourceName: "Banana"),
-        #imageLiteral(resourceName: "Cherry"),
+        //#imageLiteral(resourceName: "Cherry"),
         #imageLiteral(resourceName: "Grape"),
-        #imageLiteral(resourceName: "Kiwi"),
+        //#imageLiteral(resourceName: "Kiwi"),
         #imageLiteral(resourceName: "Lemon"),
-        #imageLiteral(resourceName: "Mango"),
-        #imageLiteral(resourceName: "Mangosteen"),
+        //#imageLiteral(resourceName: "Mango"),
+        //#imageLiteral(resourceName: "Mangosteen"),
         #imageLiteral(resourceName: "Orange"),
-        #imageLiteral(resourceName: "Pear"),
+        //#imageLiteral(resourceName: "Pear"),
         #imageLiteral(resourceName: "Strawberry"),
         #imageLiteral(resourceName: "Watermelon")
     ]
@@ -234,12 +234,16 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.bet.countFromCurrent(to: Float(game.bet), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
         self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
         
-        //self.money.countFromCurrent(to: Float(game.money), duration: ViewController.ANIMATION_INTERVAL) // String(game.money)
-        //self.bet.text     = "$" + String(game.bet)
-        //self.jackpot.text = "$" + String(game.jackpot)
+        if (game.bonus > 0) {
+            sound.shortPayOutPlayer.play()
+            payout.text = "$" + String( game.bonus)
+            payout.pop()
+        }else {
+            sound.lostPlayer.play()
+            payout.text = "$0"
+        }
         
         self.disableBetIfNeeded()
-        
     }
     
     private func draw() {
@@ -285,8 +289,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func spin(_ sender: UIButton) {
         sender.pulsate()
         //spinPlayer.play()
-        payout.text = game.spin()
-        payout.pop()
+        game.spin()
+
         self.draw()
         //spinPlayer.stop()
     }

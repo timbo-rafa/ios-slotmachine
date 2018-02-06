@@ -22,6 +22,7 @@ class SlotMachineEngine {
     var nullBet: Bool
     
     var sounds: Sound = Sound()
+    var random: Random = Random()
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -66,30 +67,16 @@ class SlotMachineEngine {
     
 
     
-    public func spin() -> String {
-        let bonus = spinReels()
-        return "Bonus: $" + String(bonus)
+    public func spin() {
+        spinReels()
     }
     
     public func reset() {
         
         print("Button reset clicked")
-        /*
-        self.jackpot = 0
-        self.money = 0
-        self.bet = 0
-        self.bonus = 0
         
-        self.selected1 = 5
-        self.selected2 = 5
-        self.selected3 = 5
-        self.selected4 = 5
-        self.selected5 = 5
+        //call init?
         
-        self.disableFive = true
-        self.disableFifty = true
-        self.nullBet = true
-       */
     }
 
     public func insert(Value value: Int) {
@@ -196,9 +183,9 @@ class SlotMachineEngine {
 
                 if (bonus > 0) {
                     self.money += bonus
-                    sounds.shortPayOutPlayer.play()
+                    //sounds.shortPayOutPlayer.play()
                 }else{
-                    sounds.lostPlayer.play()
+                    //sounds.lostPlayer.play()
                 }
             
                 self.bet = 0
@@ -219,7 +206,15 @@ class SlotMachineEngine {
     }
     
     private func rand() -> Int {
+        return self.weightedRandom()
+    }
+    
+    private func uniformRand() -> Int {
         return Int(arc4random_uniform(UInt32(self.fruitsCount)))
+    }
+    
+    private func weightedRandom() -> Int {
+        return random.weightedRandom()
     }
     
     private func setAllTo( _ row: Int) {

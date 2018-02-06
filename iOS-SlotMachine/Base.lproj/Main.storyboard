@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,34 +29,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-vf-HL3">
-                                <rect key="frame" x="0.0" y="44" width="667" height="162"/>
+                                <rect key="frame" x="0.0" y="64" width="667" height="216"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUN-3c-lOF">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="162"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ETj-Th-FNa"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nus-81-DRh">
-                                        <rect key="frame" x="133.5" y="0.0" width="133.5" height="162"/>
+                                        <rect key="frame" x="133.5" y="0.0" width="133.5" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="dz4-ND-4w5"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stW-Qd-Efc">
-                                        <rect key="frame" x="267" y="0.0" width="133" height="162"/>
+                                        <rect key="frame" x="267" y="0.0" width="133" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zYK-rH-iAB"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-RE-0cn">
-                                        <rect key="frame" x="400" y="0.0" width="133.5" height="162"/>
+                                        <rect key="frame" x="400" y="0.0" width="133.5" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="zrN-Hc-cYb"/>
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-Nb-v4E">
-                                        <rect key="frame" x="533.5" y="0.0" width="133.5" height="162"/>
+                                        <rect key="frame" x="533.5" y="0.0" width="133.5" height="216"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="3FN-dl-4hX"/>
                                         </connections>
@@ -63,7 +64,7 @@
                                 </subviews>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-72-Dmx" userLabel="Money Table">
-                                <rect key="frame" x="0.0" y="226" width="240" height="150"/>
+                                <rect key="frame" x="0.0" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONEY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-IR-0UQ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="19"/>
@@ -80,7 +81,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcp-iQ-8zK">
-                                        <rect key="frame" x="34" y="68" width="62" height="22"/>
+                                        <rect key="frame" x="34" y="68" width="62" height="2"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="fv5-4a-8JR"/>
                                         </constraints>
@@ -89,7 +90,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-Tv-0Wp">
-                                        <rect key="frame" x="28" y="44" width="75" height="97"/>
+                                        <rect key="frame" x="28" y="44" width="75" height="77"/>
                                         <state key="normal" image="small-buy"/>
                                         <connections>
                                             <action selector="insertFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smq-II-Wnp"/>
@@ -105,7 +106,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-Fs-5Vm">
-                                        <rect key="frame" x="140" y="44" width="75" height="97"/>
+                                        <rect key="frame" x="140" y="44" width="75" height="77"/>
                                         <state key="normal" image="big-buy"/>
                                         <connections>
                                             <action selector="insertFifty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9t-YB-tpy"/>
@@ -137,7 +138,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
-                                <rect key="frame" x="518" y="226" width="149" height="149"/>
+                                <rect key="frame" x="538" y="246" width="129" height="129"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="e3Z-hq-nKP"/>
@@ -153,7 +154,7 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw2-Ke-EhA" userLabel="Bet Table">
-                                <rect key="frame" x="240" y="226" width="240" height="150"/>
+                                <rect key="frame" x="240" y="246" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Us-2yb">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="19"/>
@@ -170,14 +171,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rp-AF-cnP">
-                                        <rect key="frame" x="28" y="43" width="75" height="97"/>
+                                        <rect key="frame" x="28" y="43" width="75" height="77"/>
                                         <state key="normal" image="small-bet"/>
                                         <connections>
                                             <action selector="betFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ym5-tz-pBH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuT-Yn-Wdr">
-                                        <rect key="frame" x="140" y="43" width="75" height="97"/>
+                                        <rect key="frame" x="140" y="43" width="75" height="77"/>
                                         <state key="normal" image="big-bet"/>
                                         <connections>
                                             <action selector="betFifty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMT-qh-sRC"/>
@@ -204,16 +205,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-zx-fdk" userLabel="Jackpot Header">
-                                <rect key="frame" x="152" y="0.0" width="363" height="44"/>
+                                <rect key="frame" x="152" y="0.0" width="363" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jackpot" translatesAutoresizingMaskIntoConstraints="NO" id="PIf-EA-C3Y">
-                                        <rect key="frame" x="23" y="6" width="102" height="32"/>
+                                        <rect key="frame" x="23" y="6" width="102" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="102" id="5fl-lR-2yF"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$jackpot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-sx-xjt">
-                                        <rect key="frame" x="133" y="0.0" width="222" height="44"/>
+                                        <rect key="frame" x="133" y="0.0" width="222" height="64"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                         <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -232,7 +233,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzv-9z-HNf">
-                                <rect key="frame" x="20" y="-1" width="124" height="45"/>
+                                <rect key="frame" x="20" y="-1" width="124" height="65"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="QUIT">
@@ -243,7 +244,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy6-gY-HcU">
-                                <rect key="frame" x="523" y="0.0" width="124" height="44"/>
+                                <rect key="frame" x="523" y="0.0" width="124" height="64"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="RESET">
@@ -256,7 +257,7 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Payout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHx-UJ-OS1">
                                 <rect key="frame" x="0.0" y="206" width="239.99999999999994" height="36.999999999999886"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
