@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 import SpriteKit
 
 class ViewController: UIViewController, UIPickerViewDelegate {
@@ -18,13 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     static let ANIMATION_COUNTING_INTERVAL = 1.0
     static let ANIMATION_OFFSET: CGFloat = 40
     
-    var coinPlayer = AVAudioPlayer()
     
-    
-    
-    
-
-/*
     // Original UIImage
     let fruits: [UIImage] = [
         #imageLiteral(resourceName: "fly-1"),
@@ -43,36 +36,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         #imageLiteral(resourceName: "Strawberry"),
         #imageLiteral(resourceName: "Watermelon")
     ]
-*/
-
-    let fruits: [UIImage] = [
-        #imageLiteral(resourceName: "fly-3"),
-        #imageLiteral(resourceName: "Apple"),
-        #imageLiteral(resourceName: "Banana"),
-        #imageLiteral(resourceName: "Cherry"),
-        #imageLiteral(resourceName: "Grape"),
-        #imageLiteral(resourceName: "Spin")
-    ]
-
-/*
-    let fruits: [UIImage] = [
-        #imageLiteral(resourceName: "fly-3"),
-        #imageLiteral(resourceName: "Apple"),
-        #imageLiteral(resourceName: "Banana"),
-        #imageLiteral(resourceName: "Cherry"),
-        #imageLiteral(resourceName: "Grape"),
-        #imageLiteral(resourceName: "Kiwi"),
-        #imageLiteral(resourceName: "Lemon"),
-        #imageLiteral(resourceName: "Mango"),
-        #imageLiteral(resourceName: "Mangosteen"),
-        #imageLiteral(resourceName: "Orange"),
-        #imageLiteral(resourceName: "Pear"),
-        #imageLiteral(resourceName: "Strawberry"),
-        #imageLiteral(resourceName: "Watermelon")
-    ]
-*/
     
     var game: SlotMachineEngine
+    var sound: Sound = Sound()
     
     @IBOutlet weak var picker1: UIPickerView!
     
@@ -118,18 +84,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.bet = AnimatedLabel()
         self.jackpot = AnimatedLabel()
         
-        super.init(coder: aDecoder)
+        sound.Start()
         
-        //Music for the coins
-        let coinMusic = Bundle.main.path(forResource: "insertingCoin", ofType: "mp3")
-        do {
-            coinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: coinMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
+        super.init(coder: aDecoder)
         
         
         //fatalError("init(coder:) has not been implemented")
@@ -138,7 +95,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func pressQuit(_ sender: UIButton) {
         //suspend the app in second plan
-        UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+        //UIControl().sendAction(#selector(NSURLConnection.suspend), to: UIApplication.shared, for: nil)
     }
     
     override func viewDidLoad() {
@@ -299,13 +256,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
 
     @IBAction func insertFive(_ sender: UIButton) {
         game.insert(Value:5)
-        coinPlayer.play()
+        sound.coinPlayer.play()
         self.drawValues()
     }
     
     @IBAction func insertFifty(_ sender: UIButton) {
         game.insert(Value:50)
-        coinPlayer.play()
+        sound.coinPlayer.play()
         self.drawValues()
     }
     
@@ -314,7 +271,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             print("Not enough Money to bet 5")
         }
         self.drawValues()
-        coinPlayer.play()
+        sound.coinPlayer.play()
     }
     
     @IBAction func betFifty(_ sender: UIButton) {
@@ -322,7 +279,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             print("Not enough Money to bet 50")
         }
         self.drawValues()
-        coinPlayer.play()
+        sound.coinPlayer.play()
     }
     
     @IBAction func spin(_ sender: UIButton) {

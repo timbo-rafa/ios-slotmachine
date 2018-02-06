@@ -1,5 +1,4 @@
 import Foundation
-import AVFoundation
 import SpriteKit
 import UIKit
 
@@ -22,11 +21,7 @@ class SlotMachineEngine {
     var disableFifty: Bool
     var nullBet: Bool
     
-    var spinPlayer = AVAudioPlayer()
-    var flyPlayer  = AVAudioPlayer()
-    var shortPayOutPlayer = AVAudioPlayer()
-    var richPayOutPlayer = AVAudioPlayer()
-    var lostPlayer = AVAudioPlayer()
+    var sounds: Sound = Sound()
     
     init(FruitsCount fruitsCount: Int) {
         self.fruitsCount = fruitsCount
@@ -65,63 +60,11 @@ class SlotMachineEngine {
         self.disableFifty = true
         self.nullBet = true
         
-        //Music for the spin
-        let spinMusic = Bundle.main.path(forResource: "itemreel", ofType: "wav")
-        do {
-            spinPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: spinMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the fly
-        let flyMusic = Bundle.main.path(forResource: "fly-1", ofType: "mp3")
-        do {
-            flyPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: flyMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the short pay
-        let shortPayoutMusic = Bundle.main.path(forResource: "short-payout", ofType: "mp3")
-        do {
-            shortPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: shortPayoutMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the jackpot
-        let richPayOutMusic = Bundle.main.path(forResource: "rich-payout", ofType: "mp3")
-        do {
-            richPayOutPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: richPayOutMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        //music for the lost
-        let losttMusic = Bundle.main.path(forResource: "deep-gulp", ofType: "mp3")
-        do {
-            lostPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: losttMusic! ))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-        }catch{
-            print(error)
-        }
-        
-        
+        sounds.Start()
+
     }
+    
+
     
     public func spin() -> String {
         let bonus = spinReels()
@@ -217,7 +160,7 @@ class SlotMachineEngine {
               
                 self.money += self.jackpot     // ***** JACKPOT WINNER *****
                 bonus = self.jackpot
-                richPayOutPlayer.play()
+                sounds.richPayOutPlayer.play()
 
             } else {
                 
@@ -253,9 +196,9 @@ class SlotMachineEngine {
 
                 if (bonus > 0) {
                     self.money += bonus
-                    shortPayOutPlayer.play()
+                    sounds.shortPayOutPlayer.play()
                 }else{
-                    lostPlayer.play()
+                    sounds.lostPlayer.play()
                 }
             
                 self.bet = 0
@@ -267,7 +210,7 @@ class SlotMachineEngine {
             
             self.bet = 0
             self.nullBet = true
-            flyPlayer.play()
+            sounds.flyPlayer.play()
             
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 

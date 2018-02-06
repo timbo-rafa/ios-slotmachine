@@ -10,124 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS-SlotMachine/SlotMachineEngine.swift"
-            timestampString = "539063295.914917"
+            timestampString = "539569761.217088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "init(FruitsCount:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOS-SlotMachine/ViewController.swift"
-            timestampString = "539312141.375158"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "ViewController"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "SlotMachineEngine"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_SlotMachine.ViewController.money.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "iOS-SlotMachine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/timbo-xcode/ios-slotmachine/iOS-SlotMachine/ViewController.swift"
-                  timestampString = "539228737.269212"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_SlotMachine.ViewController.money.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "iOS-SlotMachine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/timbo-xcode/ios-slotmachine/iOS-SlotMachine/ViewController.swift"
-                  timestampString = "539228737.270434"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_SlotMachine.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS_SlotMachine.ViewController&gt;"
-                  moduleName = "iOS-SlotMachine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/timbo-xcode/ios-slotmachine/iOS-SlotMachine/ViewController.swift"
-                  timestampString = "539228737.271667"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "1752">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOS-SlotMachine/ViewController.swift"
-            timestampString = "539312141.375158"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_SlotMachine.ViewController.money.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
-                  moduleName = "iOS-SlotMachine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/timbo-xcode/ios-slotmachine/iOS-SlotMachine/ViewController.swift"
-                  timestampString = "539225258.653623"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_SlotMachine.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS_SlotMachine.ViewController&gt;"
-                  moduleName = "iOS-SlotMachine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/timbo-xcode/ios-slotmachine/iOS-SlotMachine/ViewController.swift"
-                  timestampString = "539225258.657689"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "1752">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
