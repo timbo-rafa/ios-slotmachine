@@ -46,7 +46,7 @@
 		3FD6DC6D202925C10015B441 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		3FD6DC6F20292B770015B441 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		3FD6DC7320293BBC0015B441 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
-		3FD6DC77202942C10015B441 /* watermelon_splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = watermelon_splash.jpg; path = ../../../Desktop/watermelon_splash.jpg; sourceTree = "<group>"; };
+		3FD6DC77202942C10015B441 /* watermelon_splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = watermelon_splash.jpg; sourceTree = "<group>"; };
 		3FD7B2C6201816660054D198 /* iOS-SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SlotMachine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD7B2C9201816660054D198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD7B2CB201816660054D198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
