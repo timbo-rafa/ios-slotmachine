@@ -90,6 +90,10 @@ class SlotMachineEngine {
         }
     }
     
+    public func resetBonus() {
+        self.bonus = 0
+    }
+    
     public func bet(Value value: Int) -> Bool {
         // Only bet what you have
         if (value > self.money) {

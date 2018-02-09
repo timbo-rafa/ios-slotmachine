@@ -100,7 +100,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBAction func pressQuit(_ sender: UIButton) {
         //suspend the app in second plan
-        UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+        //UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
     }
     
     override func viewDidLoad() {
@@ -244,9 +244,10 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             payout.text = "$" + String( game.bonus)
             payout.pop()
         }else {
-            sound.lostPlayer.play()
+            //sound.lostPlayer.play()
             payout.text = "$0"
         }
+        game.resetBonus()
         
         self.disableBetIfNeeded()
     }
