@@ -115,7 +115,7 @@ class SlotMachineEngine {
         return true
     }
     
-    private func spinReels() -> Int {
+    private func spinReels() {
         
         //Spin Sound
         //spinPlayer.play()
@@ -210,7 +210,6 @@ class SlotMachineEngine {
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
         print("Bonus = ", bonus)  // write bonus in the log
-        return bonus
     }
     
     private func rand() -> Int {
