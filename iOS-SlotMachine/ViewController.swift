@@ -92,9 +92,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         sound.Start()
         
         super.init(coder: aDecoder)
-        
-        
-        //fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -110,10 +107,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.setupAnimatedLabels()
         
         self.draw()
-        
-        
-        
-        
     }
     
     private func setupAnimatedLabels() {
@@ -150,8 +143,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         betTable.layer.borderColor = Colors.watermelonDarkGreen.cgColor
         betTable.layer.borderWidth = 2
         betTable.layer.cornerRadius = 20
-        
-        //payout.isEnabled =
         
         jackpotHeader.layer.cornerRadius = jackpotHeader.bounds.height / 3
         setAllPickersColor()
@@ -211,11 +202,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         return myView
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        // do something with selected row
-    }
-    
     private func drawReels() {
         // return all pickers to last line so all reels rolls up on animation
         picker1.selectRow(game.emptyRow, inComponent: 0, animated: false)
@@ -224,7 +210,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         picker4.selectRow(game.emptyRow, inComponent: 0, animated: false)
         picker5.selectRow(game.emptyRow, inComponent: 0, animated: false)
 
-        // display selected rows
+        // display selected rows in an animated fashion
         picker1.selectRow(game.selected1, inComponent: 0, animated: true)
         picker2.selectRow(game.selected2, inComponent: 0, animated: true)
         picker3.selectRow(game.selected3, inComponent: 0, animated: true)
@@ -239,6 +225,17 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.bet.countFromCurrent(to: Float(game.bet), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
         self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
         
+        self.disableBetIfNeeded()
+    }
+    
+    private func draw() {
+        //update the UI on each game tick
+        self.drawReels()
+        self.drawValues()
+        self.displayBonus()
+    }
+    
+    private func displayBonus() {
         if (game.bonus > 0) {
             sound.shortPayOutPlayer.play()
             payout.text = "$" + String( game.bonus)
@@ -248,14 +245,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             payout.text = "$0"
         }
         game.resetBonus()
-        
-        self.disableBetIfNeeded()
-    }
-    
-    private func draw() {
-        //update the UI on each game tick
-        self.drawReels()
-        self.drawValues()
     }
     
     private func disableBetIfNeeded() {
