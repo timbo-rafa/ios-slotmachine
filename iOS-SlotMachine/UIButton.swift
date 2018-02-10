@@ -23,4 +23,10 @@ extension UIButton {
         self.layer.borderWidth = borderWidth
         self.layer.cornerRadius = cornerRadius
     }
+    
+    func isEnabledAnimatedSet(_ isEnabled: Bool) {
+        UIView.transition(with: self, duration: ViewController.ANIMATION_FLASH_INTERVAL, options: .transitionCrossDissolve, animations: {
+            self.isEnabled = isEnabled
+        }, completion: nil)
+    }
 }

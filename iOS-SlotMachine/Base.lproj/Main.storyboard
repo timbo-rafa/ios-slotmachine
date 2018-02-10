@@ -149,15 +149,15 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-4F-C6C">
                                 <rect key="frame" x="538" y="246" width="129" height="129"/>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.10980392160000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5045072115" green="0.067451189009999996" blue="0.1052887963" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="e3Z-hq-nKP"/>
                                     <constraint firstAttribute="width" secondItem="WmW-4F-C6C" secondAttribute="height" multiplier="1:1" id="tfe-eR-EVJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
-                                <state key="normal" title="SPIN">
+                                <state key="normal" title="SPIN" backgroundImage="watermelon-pattern">
                                     <color key="titleColor" red="0.38823529410000002" green="0.98431372549999996" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="spin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAs-OZ-gOk"/>
@@ -341,5 +341,6 @@
         <image name="kitchen-cloth" width="1000" height="707"/>
         <image name="small-bet" width="123" height="97"/>
         <image name="small-buy" width="123" height="98"/>
+        <image name="watermelon-pattern" width="626" height="626"/>
     </resources>
 </document>

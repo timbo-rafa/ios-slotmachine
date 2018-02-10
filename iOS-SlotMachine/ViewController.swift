@@ -133,6 +133,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         //spinButton.layer.cornerRadius = spinButton.frame.width / 2
         
         spinButton.buttonize(6, spinButton.frame.width / 2)
+        spinButton.clipsToBounds = true
+        
         quitButton.buttonize(3, quitButton.frame.height / 3)
         resetButton.buttonize(3, quitButton.frame.height / 3)
         
@@ -248,9 +250,13 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func disableBetIfNeeded() {
-        betFive.isEnabled = !game.disableFive
-        betFifty.isEnabled = !game.disableFifty
-        spinButton.isEnabled = !game.nullBet
+        //betFive.isEnabled = !game.disableFive
+        //betFifty.isEnabled = !game.disableFifty
+        //spinButton.isEnabled = !game.nullBet
+        
+        betFive.isEnabledAnimatedSet(!game.disableFive)
+        betFifty.isEnabledAnimatedSet(!game.disableFifty)
+        spinButton.isEnabledAnimatedSet(!game.nullBet)
     }
 
     @IBAction func insertFive(_ sender: UIButton) {
