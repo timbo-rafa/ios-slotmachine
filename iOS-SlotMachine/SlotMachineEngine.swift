@@ -159,35 +159,7 @@ class SlotMachineEngine {
 
             } else {
                 
-                let pivot1 = checkMatch(s1) // compares selected1 (s1) value with the second, third, forth and fifth reels
-    
-                if ( pivot1 == "TTTFF" || pivot1 == "FTTTF" || pivot1 == "FFTTT" ) {
-                    bonus = self.bet * 3
-                } else if ( pivot1 == "TFTTF" || pivot1 == "FTTFT" || pivot1 == "TTFTF" || pivot1 == "TFTFT" || pivot1 == "FTFTT" ) {
-                    bonus = self.bet * 2
-                } else if ( pivot1 == "TFFTT" || pivot1 == "TTFFT" ) {
-                    bonus = self.bet * 1
-                }
-
-                let pivot2 = checkMatch(s2) // compares selected2 (s2) value with the first, third, forth and fifth reels
-            
-                if ( pivot2 == "TTTFF" || pivot2 == "FTTTF" || pivot2 == "FFTTT" ) {
-                    bonus = self.bet * 3
-                } else if ( pivot2 == "TFTTF" || pivot2 == "FTTFT" || pivot2 == "TTFTF" || pivot2 == "TFTFT" || pivot2 == "FTFTT" ) {
-                    bonus = self.bet * 2
-                } else if ( pivot2 == "TFFTT" || pivot2 == "TTFFT" ) {
-                    bonus = self.bet * 1
-                }
-
-                let pivot3 = checkMatch(s3) // compares selected3 (s3) value with the first, second, forth and fifth reels
-            
-                if ( pivot3 == "TTTFF" || pivot3 == "FTTTF" || pivot3 == "FFTTT" ) {
-                    bonus = self.bet * 3
-                } else if ( pivot3 == "TFTTF" || pivot3 == "FTTFT" || pivot3 == "TTFTF" || pivot3 == "TFTFT" || pivot3 == "FTFTT" ) {
-                    bonus = self.bet * 2
-                } else if ( pivot3 == "TFFTT" || pivot3 == "TTFFT" ) {
-                    bonus = self.bet * 1
-                }
+                checkForRepeatedFruits()
 
                 if (bonus > 0) {
                     self.money += bonus
@@ -210,6 +182,30 @@ class SlotMachineEngine {
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 
         print("Bonus = ", bonus)  // write bonus in the log
+    }
+    
+    private func checkForRepeatedFruits() {
+        // compares selected1 (s1) value with the second, third, forth and fifth reels
+        let pivot1 = checkMatch(self.selected1)
+        pivotCompare(pivot1)
+        
+        // compares selected2 (s2) value with the first, third, forth and fifth reels
+        let pivot2 = checkMatch(self.selected2)
+        pivotCompare(pivot2)
+        
+        // compares selected3 (s3) value with the first, second, forth and fifth reels
+        let pivot3 = checkMatch(self.selected3)
+        pivotCompare(pivot3)
+    }
+    
+    private func pivotCompare(_ pivot: String) {
+        if ( pivot == "TTTFF" || pivot == "FTTTF" || pivot == "FFTTT" ) {
+            bonus = self.bet * 3
+        } else if ( pivot == "TFTTF" || pivot == "FTTFT" || pivot == "TTFTF" || pivot == "TFTFT" || pivot == "FTFTT" ) {
+            bonus = self.bet * 2
+        } else if ( pivot == "TFFTT" || pivot == "TTFFT" ) {
+            bonus = self.bet * 1
+        }
     }
     
     private func rand() -> Int {
