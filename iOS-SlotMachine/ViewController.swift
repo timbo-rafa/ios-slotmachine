@@ -246,8 +246,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         else if (game.bonus > 0) {
             sound.shortPayOutPlayer.play()
-            payout.text = "$" + String( game.bonus)
+            payout.text = "$" + String(game.bonus)
             payout.pop()
+            self.flashPickers()
         } else {
             //sound.lostPlayer.play()
             payout.text = "$0"
@@ -256,9 +257,24 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         game.resetBonus()
         
         if (game.fly) {
+            flashAll()
             sound.flyPlayer.play()
             game.resetFly()
         }
+    }
+    
+    private func flashPickers() {
+        //if (String(game.match[0] as Character) == "T") {
+            
+        //}
+    }
+    
+    private func flashAll() {
+        picker1.flash(Colors.gray)
+        picker2.flash(Colors.gray)
+        picker3.flash(Colors.gray)
+        picker4.flash(Colors.gray)
+        picker5.flash(Colors.gray)
     }
     
     private func disableBetIfNeeded() {

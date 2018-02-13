@@ -24,6 +24,8 @@ class SlotMachineEngine {
     var isJackpot: Bool
     var fly: Bool
     
+    var match: String
+    
     var sounds: Sound = Sound()
     var random: Random = Random()
     
@@ -194,10 +196,13 @@ class SlotMachineEngine {
     private func pivotCompare(_ pivot: String) {
         if ( pivot == "TTTFF" || pivot == "FTTTF" || pivot == "FFTTT" ) {
             bonus = self.bet * 3
+            self.match = pivot
         } else if ( pivot == "TFTTF" || pivot == "FTTFT" || pivot == "TTFTF" || pivot == "TFTFT" || pivot == "FTFTT" ) {
             bonus = self.bet * 2
+            self.match = pivot
         } else if ( pivot == "TFFTT" || pivot == "TTFFT" ) {
             bonus = self.bet * 1
+            self.match = pivot
         }
     }
     
