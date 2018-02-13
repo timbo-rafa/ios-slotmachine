@@ -22,6 +22,7 @@ class SlotMachineEngine {
     var disableFifty: Bool
     var nullBet: Bool
     var isJackpot: Bool
+    var fly: Bool
     
     var sounds: Sound = Sound()
     var random: Random = Random()
@@ -47,6 +48,7 @@ class SlotMachineEngine {
         self.disableFifty = true
         self.nullBet = true
         self.isJackpot = false
+        self.fly = false
         
         sounds.Start()
     }
@@ -81,6 +83,10 @@ class SlotMachineEngine {
     public func resetJackpot() {
         self.jackpot = 0
         self.isJackpot = false
+    }
+    
+    public func resetFly() {
+        self.fly = false
     }
     
     public func bet(Value value: Int) -> Bool {
@@ -138,7 +144,6 @@ class SlotMachineEngine {
             s3 >= fliesCount &&
             s4 >= fliesCount &&
             s5 >= fliesCount) {
-        //if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0) {
             
             if (s1 == s2 && s2 == s3 && s3 == s4 && s4 == s5) {
               
@@ -162,10 +167,10 @@ class SlotMachineEngine {
             } // if (s1 == s2  && s2 == s3 && s3 == s4 && s4 == s5)
             
         } else {
-            
+            // Fly came
             self.bet = 0
             self.nullBet = true
-            sounds.flyPlayer.play()
+            self.fly = true
             
         } // if (s1 > 0 && s2 > 0 && s3 > 0 && s4 > 0 && s5 > 0)
 

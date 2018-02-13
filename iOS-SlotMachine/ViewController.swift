@@ -238,20 +238,26 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     private func displayBonus() {
-        if (game.bonus > 0) {
-            if (game.isJackpot) {
-                sound.richPayOutPlayer.play()
-                game.resetJackpot()
-                self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
-            } else {
-                sound.shortPayOutPlayer.play()
-            }
+        if (game.isJackpot) {
+            sound.richPayOutPlayer.play()
+            game.resetJackpot()
+            self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+        }
+        
+        else if (game.bonus > 0) {
+            sound.shortPayOutPlayer.play()
             payout.text = "$" + String( game.bonus)
             payout.pop()
-            game.resetBonus()
-        }else {
+        } else {
             //sound.lostPlayer.play()
             payout.text = "$0"
+            
+        }
+        game.resetBonus()
+        
+        if (game.fly) {
+            sound.flyPlayer.play()
+            game.resetFly()
         }
     }
     
