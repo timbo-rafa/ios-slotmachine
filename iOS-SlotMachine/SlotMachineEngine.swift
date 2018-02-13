@@ -21,6 +21,7 @@ class SlotMachineEngine {
     var disableFive: Bool
     var disableFifty: Bool
     var nullBet: Bool
+    var isJackpot: Bool
     
     var sounds: Sound = Sound()
     var random: Random = Random()
@@ -37,23 +38,6 @@ class SlotMachineEngine {
         self.selected4 = self.emptyRow
         self.selected5 = self.emptyRow
 /**/
-/*
-        // start with 5 "Spins" (Spin image must be in the UIImage declaration
-        self.selected1 = 5
-        self.selected2 = 5
-        self.selected3 = 5
-        self.selected4 = 5
-        self.selected5 = 5
-*/
-/*
-        // start with 5 "Flys"
-        self.selected1 = 0
-        self.selected2 = 0
-        self.selected3 = 0
-        self.selected4 = 0
-        self.selected5 = 0
-*/
-        
         self.jackpot = 0
         self.money = 0
         self.bet = 0
@@ -62,9 +46,9 @@ class SlotMachineEngine {
         self.disableFive = true
         self.disableFifty = true
         self.nullBet = true
+        self.isJackpot = false
         
         sounds.Start()
-
     }
     
 
@@ -92,6 +76,11 @@ class SlotMachineEngine {
     
     public func resetBonus() {
         self.bonus = 0
+    }
+    
+    public func resetJackpot() {
+        self.jackpot = 0
+        self.isJackpot = false
     }
     
     public func bet(Value value: Int) -> Bool {
@@ -155,8 +144,7 @@ class SlotMachineEngine {
               
                 self.money += self.jackpot     // ***** JACKPOT WINNER *****
                 bonus = self.jackpot
-                sounds.richPayOutPlayer.play()
-
+                self.isJackpot = true
             } else {
                 
                 checkForRepeatedFruits()
