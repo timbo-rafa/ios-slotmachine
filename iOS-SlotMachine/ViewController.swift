@@ -241,9 +241,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         if (game.isJackpot) {
             sound.richPayOutPlayer.play()
             game.resetJackpot()
-            self.jackpot.countFromCurrent(to: Float(game.jackpot), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+            self.jackpot.countFromCurrent(to: Float(0.0), duration: ViewController.ANIMATION_COUNTING_INTERVAL)
+            payout.text = "$" + String(game.bonus)
+            payout.pop()
+            self.flashPickers()
         }
-        
         else if (game.bonus > 0) {
             sound.shortPayOutPlayer.play()
             payout.text = "$" + String(game.bonus)
@@ -257,19 +259,31 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         game.resetBonus()
         
         if (game.fly) {
-            flashAll()
+            flashAllGray()
             sound.flyPlayer.play()
             game.resetFly()
         }
     }
     
     private func flashPickers() {
-        //if (String(game.match[0] as Character) == "T") {
-            
-        //}
+        if (game.selected1 == game.matchedFruit) {
+            picker1.flash(Colors.yellow)
+        }
+        if (game.selected2 == game.matchedFruit) {
+            picker2.flash(Colors.yellow)
+        }
+        if (game.selected3 == game.matchedFruit) {
+            picker3.flash(Colors.yellow)
+        }
+        if (game.selected4 == game.matchedFruit) {
+            picker4.flash(Colors.yellow)
+        }
+        if (game.selected5 == game.matchedFruit) {
+            picker5.flash(Colors.yellow)
+        }
     }
     
-    private func flashAll() {
+    private func flashAllGray() {
         picker1.flash(Colors.gray)
         picker2.flash(Colors.gray)
         picker3.flash(Colors.gray)
