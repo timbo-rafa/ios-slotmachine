@@ -32,7 +32,7 @@ extension UILabel {
         if (!finished) {
             return
         }
-        UIView.animate(withDuration: ViewController.ANIMATION_INTERVAL, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: ViewController.ANIMATION_INTERVAL, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
             self.alpha = 0.0
         }, completion: hide)
     }
