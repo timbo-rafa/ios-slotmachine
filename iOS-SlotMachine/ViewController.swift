@@ -16,7 +16,7 @@ import SpriteKit
 
 class ViewController: UIViewController, UIPickerViewDelegate {
 
-    static let ANIMATION_DELAY = 0.2
+    static let ANIMATION_DELAY = 1.0
     static let ANIMATION_INTERVAL = 1.0
     static let ANIMATION_FLASH_INTERVAL = 0.2
     static let ANIMATION_COUNTING_INTERVAL = 1.0
