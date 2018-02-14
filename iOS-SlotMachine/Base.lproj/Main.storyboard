@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -152,7 +151,6 @@
                                 <color key="backgroundColor" red="0.5045072115" green="0.067451189009999996" blue="0.1052887963" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="e3Z-hq-nKP"/>
-                                    <constraint firstAttribute="width" secondItem="WmW-4F-C6C" secondAttribute="height" multiplier="1:1" id="tfe-eR-EVJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <state key="normal" title="SPIN" backgroundImage="watermelon-pattern">
