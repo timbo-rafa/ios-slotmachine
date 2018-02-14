@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS-SlotMachine/SlotMachineEngine.swift"
-            timestampString = "540176448.9672379"
+            timestampString = "540262328.504604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "SlotMachineEngine"
             landmarkType = "3">
          </BreakpointContent>
