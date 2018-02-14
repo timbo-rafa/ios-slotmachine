@@ -156,5 +156,12 @@ class AnimatedLabel: UILabel {
         self.shadowColor = label.shadowColor
         self.textAlignment = label.textAlignment
         self.addConstraints(label.constraints)
+        self.center = label.center
+        self.baselineAdjustment = label.baselineAdjustment
+        self.attributedText = label.attributedText
+        self.lineBreakMode = label.lineBreakMode
+        self.transform = label.transform
+        self.preferredMaxLayoutWidth = label.preferredMaxLayoutWidth
+        
     }
 }
